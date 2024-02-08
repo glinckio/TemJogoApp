@@ -1,6 +1,6 @@
 name: General Pull Request
 on:
-  pull-request:
+  - pull-request
 jobs:
   install-and-test:
     runs-on: ubuntu-latest

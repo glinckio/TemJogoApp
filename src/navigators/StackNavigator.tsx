@@ -4,7 +4,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {routes} from './routes';
 
 type RootStackParamList = {
-  Hello: undefined;
+  Login: undefined;
 };
 
 export const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -12,7 +12,7 @@ export const Stack = createNativeStackNavigator<RootStackParamList>();
 const StackNavigator = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Hello">
+      <Stack.Navigator initialRouteName="Login">
         {routes.map(routeConfig => (
           <Stack.Screen key={routeConfig.name} {...routeConfig} />
         ))}

@@ -35,7 +35,7 @@ const LoginScreen = () => {
           <View style={styles.content}>
             <View style={styles.formContainer}>
               <View style={styles.logoContainer}>
-                <Image source={require('../assets/img/logo.png')} />
+                <Image source={require('../../assets/img/logo.png')} />
               </View>
               <View style={styles.form}>
                 <Text
@@ -53,7 +53,7 @@ const LoginScreen = () => {
                     icon={
                       <Image
                         style={styles.inputIcon}
-                        source={require('../assets/icons/fi-rr-envelope.png')}
+                        source={require('../../assets/icons/fi-rr-envelope.png')}
                       />
                     }
                   />
@@ -64,7 +64,7 @@ const LoginScreen = () => {
                     icon={
                       <Image
                         style={styles.inputIcon}
-                        source={require('../assets/icons/fi-rr-lock.png')}
+                        source={require('../../assets/icons/fi-rr-lock.png')}
                       />
                     }
                   />

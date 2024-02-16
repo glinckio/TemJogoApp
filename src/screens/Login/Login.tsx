@@ -9,10 +9,10 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import {colors} from '../utils/colors';
-import InputTextField from '../components/InputTextField/InputTextField';
-import {useRootState} from '../context/RootContext';
-import PrimaryButton from '../components/PrimaryButton/PrimaryButton';
+import {colors} from '../../utils/colors';
+import InputTextField from '../../components/InputTextField/InputTextField';
+import {useRootState} from '../../context/RootContext';
+import PrimaryButton from '../../components/PrimaryButton/PrimaryButton';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {content} from './Login.content';
 

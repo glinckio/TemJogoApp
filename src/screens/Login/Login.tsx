@@ -14,6 +14,7 @@ import PrimaryButton from '../../components/PrimaryButton/PrimaryButton';
 import {content} from './Login.content';
 import Template from '../../components/Template/Template';
 import {RoutesEnum} from '../../navigators/StackNavigator';
+import GoogleButton from '../../components/GoogleButton/GoogleButton';
 
 const LoginScreen = ({navigation}: any) => {
   const [name, setName] = useState('');
@@ -70,6 +71,9 @@ const LoginScreen = ({navigation}: any) => {
                   {content.forgotYourPassword}
                 </Text>
               </TouchableOpacity>
+            </View>
+            <View style={styles.loginWithContainer}>
+              <GoogleButton />
             </View>
           </View>
           <View style={styles.signUpContainer}>
@@ -159,6 +163,9 @@ const styles = StyleSheet.create({
   },
   signUptext: {
     fontFamily: 'Arboria-Bold',
+  },
+  loginWithContainer: {
+    marginTop: 42,
   },
 });
 

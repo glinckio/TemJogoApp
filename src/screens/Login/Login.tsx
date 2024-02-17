@@ -1,8 +1,6 @@
 import React, {useState} from 'react';
 import {
   Image,
-  KeyboardAvoidingView,
-  Platform,
   ScrollView,
   StyleSheet,
   Text,
@@ -13,109 +11,99 @@ import {colors} from '../../utils/colors';
 import InputTextField from '../../components/InputTextField/InputTextField';
 import {useRootState} from '../../context/RootContext';
 import PrimaryButton from '../../components/PrimaryButton/PrimaryButton';
-import {SafeAreaView} from 'react-native-safe-area-context';
 import {content} from './Login.content';
+import Template from '../../components/Template/Template';
+import {RoutesEnum} from '../../navigators/StackNavigator';
 
-const LoginScreen = () => {
+const LoginScreen = ({navigation}: any) => {
   const [name, setName] = useState('');
   const [password, setPassword] = useState('');
   const {theme} = useRootState();
 
   return (
-    <KeyboardAvoidingView
-      behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
-      style={styles.container}>
-      <SafeAreaView
-        edges={['right', 'left', 'top']}
-        style={[
-          styles.container,
-          {backgroundColor: colors[theme].secondary.default},
-        ]}>
-        <ScrollView contentContainerStyle={styles.wrapper}>
-          <View style={styles.content}>
-            <View style={styles.formContainer}>
-              <View style={styles.logoContainer}>
-                <Image source={require('../../assets/img/logo.png')} />
-              </View>
-              <View style={styles.form}>
-                <Text
-                  style={[
-                    styles.formTitle,
-                    {color: colors[theme].tertiary.default},
-                  ]}>
-                  {content.title}
-                </Text>
-                <View style={styles.fieldsContainer}>
-                  <InputTextField
-                    text={name}
-                    onChangeText={setName}
-                    placeholder={content.fields.name}
-                    icon={
-                      <Image
-                        style={styles.inputIcon}
-                        source={require('../../assets/icons/fi-rr-envelope.png')}
-                      />
-                    }
-                  />
-                  <InputTextField
-                    text={password}
-                    onChangeText={setPassword}
-                    placeholder={content.fields.password}
-                    icon={
-                      <Image
-                        style={styles.inputIcon}
-                        source={require('../../assets/icons/fi-rr-lock.png')}
-                      />
-                    }
-                  />
-                  <PrimaryButton title={content.loginButton} />
-                </View>
-                <TouchableOpacity>
-                  <Text
-                    style={[
-                      styles.forgotPassword,
-                      {color: colors[theme].tertiary.default},
-                    ]}>
-                    {content.forgotYourPassword}
-                  </Text>
-                </TouchableOpacity>
-              </View>
+    <Template>
+      <ScrollView contentContainerStyle={styles.container}>
+        <View style={styles.wrapper}>
+          <View style={styles.formContainer}>
+            <View style={styles.logoContainer}>
+              <Image source={require('../../assets/img/logo.png')} />
             </View>
-            <View style={styles.signUpContainer}>
-              <View style={styles.noAccountContainer}>
+            <View style={styles.form}>
+              <Text
+                style={[
+                  styles.formTitle,
+                  {color: colors[theme].tertiary.default},
+                ]}>
+                {content.title}
+              </Text>
+              <View style={styles.fieldsContainer}>
+                <InputTextField
+                  text={name}
+                  onChangeText={setName}
+                  placeholder={content.fields.name}
+                  icon={
+                    <Image
+                      style={styles.inputIcon}
+                      source={require('../../assets/icons/fi-rr-envelope.png')}
+                    />
+                  }
+                />
+                <InputTextField
+                  text={password}
+                  onChangeText={setPassword}
+                  placeholder={content.fields.password}
+                  icon={
+                    <Image
+                      style={styles.inputIcon}
+                      source={require('../../assets/icons/fi-rr-lock.png')}
+                    />
+                  }
+                />
+                <PrimaryButton title={content.loginButton} />
+              </View>
+              <TouchableOpacity>
                 <Text
                   style={[
-                    styles.noAccountText,
+                    styles.forgotPassword,
                     {color: colors[theme].tertiary.default},
                   ]}>
-                  {content.dontHaveAnAccount}
+                  {content.forgotYourPassword}
                 </Text>
-                <TouchableOpacity>
-                  <Text
-                    style={[
-                      styles.signUptext,
-                      {color: colors[theme].primary.default},
-                    ]}>
-                    {content.signUp}
-                  </Text>
-                </TouchableOpacity>
-              </View>
+              </TouchableOpacity>
             </View>
           </View>
-        </ScrollView>
-      </SafeAreaView>
-    </KeyboardAvoidingView>
+          <View style={styles.signUpContainer}>
+            <View style={styles.noAccountContainer}>
+              <Text
+                style={[
+                  styles.noAccountText,
+                  {color: colors[theme].tertiary.default},
+                ]}>
+                {content.dontHaveAnAccount}
+              </Text>
+              <TouchableOpacity
+                onPress={() => navigation.navigate(RoutesEnum.SignUp)}>
+                <Text
+                  style={[
+                    styles.signUptext,
+                    {color: colors[theme].primary.default},
+                  ]}>
+                  {content.signUp}
+                </Text>
+              </TouchableOpacity>
+            </View>
+          </View>
+        </View>
+      </ScrollView>
+    </Template>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-  },
-  wrapper: {
     flexGrow: 1,
   },
-  content: {
+  wrapper: {
     flex: 1,
     justifyContent: 'space-between',
   },

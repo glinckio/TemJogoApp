@@ -1,0 +1,59 @@
+import React from 'react';
+import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import TopHeader from '../../components/TopHeader/TopHeader';
+import {useRootState} from '../../context/RootContext';
+import Template from '../../components/Template/Template';
+import {colors} from '../../utils/colors';
+
+const SignUpScreen = () => {
+  const {theme} = useRootState();
+
+  return (
+    <Template>
+      <TopHeader />
+      <View style={styles.container}>
+        <View>
+          <Text style={[styles.text, {color: colors[theme].tertiary.default}]}>
+            Seu cadastro
+          </Text>
+          <Text style={[styles.text, {color: colors[theme].tertiary.default}]}>
+            será como?
+          </Text>
+        </View>
+        <TouchableOpacity>
+          <Image
+            style={styles.image}
+            source={require('../../assets/img/court.png')}
+          />
+        </TouchableOpacity>
+        <TouchableOpacity>
+          <Image
+            style={styles.image}
+            source={require('../../assets/img/player.png')}
+          />
+        </TouchableOpacity>
+      </View>
+    </Template>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    paddingLeft: 15,
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 30,
+  },
+  text: {
+    fontFamily: 'Hanson-Bold',
+    fontSize: 24,
+    textAlign: 'center',
+  },
+  image: {
+    width: 230,
+    height: 230,
+  },
+});
+
+export default SignUpScreen;

@@ -11,7 +11,7 @@ interface RootContextType {
 }
 
 interface RootProviderType {
-  children: React.JSX.Element;
+  children: React.ReactNode;
 }
 
 export const RootContext = createContext<RootContextType>({

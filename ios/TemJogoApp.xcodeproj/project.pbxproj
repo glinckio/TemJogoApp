@@ -9,25 +9,23 @@
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* TemJogoAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* TemJogoAppTests.m */; };
 		0C80B921A6F3F58F76C31292 /* libPods-TemJogoApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-TemJogoApp.a */; };
+		10454C22E2BC4F7DA0D5E2F5 /* Arboria-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 608D9D4007594A1980B716EB /* Arboria-Thin.ttf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		3431DE25B86145C3996204BB /* Arboria-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C70C6A6392E340C593079C53 /* Arboria-BoldItalic.ttf */; };
+		6A6FF00480844B4D83776527 /* Arboria-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A8AE1837F3F1439BA3588B3A /* Arboria-Medium.ttf */; };
+		72FA153F490944B5B70F0245 /* Arboria-BookItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 13EE02FBC8504076A13A581E /* Arboria-BookItalic.ttf */; };
 		7699B88040F8A987B510C191 /* libPods-TemJogoApp-TemJogoAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-TemJogoApp-TemJogoAppTests.a */; };
+		7CF0304CC4A940609C1A83A0 /* Arboria-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6B7A9BB936940638DFF95DE /* Arboria-ThinItalic.ttf */; };
+		81440E9CD26344BDB6EC73E6 /* Arboria-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 17129D55C3334A008D8C5B2E /* Arboria-LightItalic.ttf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		CFB691BA135448D6825059EA /* Arboria-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 10105991F13449D3973FA949 /* Arboria-Black.ttf */; };
-		333F2E0545EC4098898ABCB8 /* Arboria-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1EECA17A2E034005965A823C /* Arboria-BlackItalic.ttf */; };
-		9F1F55F1A7224534A1A87466 /* Arboria-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A9306B5161FA4B86AA58FF34 /* Arboria-Bold.ttf */; };
-		5D1C06496AF64445B8126184 /* Arboria-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8A98B45B7C1E448E9D8DA0AF /* Arboria-BoldItalic.ttf */; };
-		36DE7FD3689B4697962B991E /* Arboria-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E7A0793F84704A669D766360 /* Arboria-Book.ttf */; };
-		20F29137ABBB4900A33494FA /* Arboria-BookItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E8017ED71CBB45FB88B1916B /* Arboria-BookItalic.ttf */; };
-		411EB8939628451D9FFA3E18 /* Arboria-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 69B7039725E84EA2BAA80973 /* Arboria-Light.ttf */; };
-		5C62E38BC4BC45319B1D87F2 /* Arboria-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 217C0C017C97475DB78E4583 /* Arboria-LightItalic.ttf */; };
-		52EBEEBF0E91410FAD9B9A41 /* Arboria-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A4E0B66A490947458B4BD161 /* Arboria-Medium.ttf */; };
-		A0BA6B01679E41A393FB87E1 /* Arboria-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 09F36EDF5DC14BE6B9E1A54E /* Arboria-MediumItalic.ttf */; };
-		5F53F32D66D9493ABF37A254 /* Arboria-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5B642BC236254576BF47FE05 /* Arboria-Thin.ttf */; };
-		1EAAE11C1A3F4CC3933E1567 /* Arboria-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 693F23AEC78A42DE87F3B7CF /* Arboria-ThinItalic.ttf */; };
-		98AA6034B9104F35A6CC1DAB /* Hanson-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE47E619EE4943FFA3A4D75A /* Hanson-Bold.ttf */; };
-		814D7E71E29D4EABB618E9AD /* Hanson-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F1EA628C37414DAAA06CAAC5 /* Hanson-Bold.otf */; };
+		A0EEADA3BA6E4124B63F70AF /* Arboria-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9A29CBACC474CA2BC620F22 /* Arboria-BlackItalic.ttf */; };
+		ACACDBDE647B49D6AC2154C9 /* Arboria-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 30AA58EE2A19463F9E070061 /* Arboria-Light.ttf */; };
+		B7EA25B55F2644799343727D /* Arboria-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D56803E85F87432396C1C877 /* Arboria-Bold.ttf */; };
+		D7198813F8EB4C21942D7BF3 /* Arboria-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B3EEAAAE182D4639AD3957BA /* Arboria-Black.ttf */; };
+		DF7DCCE892094160A88DF5A8 /* Arboria-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C89D53EDD5B545B6A8797BDA /* Arboria-Book.ttf */; };
+		E1DFB660E081418890C1A728 /* Arboria-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 536E89BDCB3A4C868E667BD5 /* Arboria-MediumItalic.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,28 +48,26 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = TemJogoApp/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = TemJogoApp/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = TemJogoApp/main.m; sourceTree = "<group>"; };
+		13EE02FBC8504076A13A581E /* Arboria-BookItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Arboria-BookItalic.ttf"; path = "../src/assets/fonts/Arboria/Arboria-BookItalic.ttf"; sourceTree = "<group>"; };
+		17129D55C3334A008D8C5B2E /* Arboria-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Arboria-LightItalic.ttf"; path = "../src/assets/fonts/Arboria/Arboria-LightItalic.ttf"; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-TemJogoApp-TemJogoAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TemJogoApp-TemJogoAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		30AA58EE2A19463F9E070061 /* Arboria-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Arboria-Light.ttf"; path = "../src/assets/fonts/Arboria/Arboria-Light.ttf"; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-TemJogoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TemJogoApp.debug.xcconfig"; path = "Target Support Files/Pods-TemJogoApp/Pods-TemJogoApp.debug.xcconfig"; sourceTree = "<group>"; };
+		536E89BDCB3A4C868E667BD5 /* Arboria-MediumItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Arboria-MediumItalic.ttf"; path = "../src/assets/fonts/Arboria/Arboria-MediumItalic.ttf"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-TemJogoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TemJogoApp.release.xcconfig"; path = "Target Support Files/Pods-TemJogoApp/Pods-TemJogoApp.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-TemJogoApp-TemJogoAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TemJogoApp-TemJogoAppTests.debug.xcconfig"; path = "Target Support Files/Pods-TemJogoApp-TemJogoAppTests/Pods-TemJogoApp-TemJogoAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-TemJogoApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TemJogoApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		608D9D4007594A1980B716EB /* Arboria-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Arboria-Thin.ttf"; path = "../src/assets/fonts/Arboria/Arboria-Thin.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = TemJogoApp/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-TemJogoApp-TemJogoAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TemJogoApp-TemJogoAppTests.release.xcconfig"; path = "Target Support Files/Pods-TemJogoApp-TemJogoAppTests/Pods-TemJogoApp-TemJogoAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		A8AE1837F3F1439BA3588B3A /* Arboria-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Arboria-Medium.ttf"; path = "../src/assets/fonts/Arboria/Arboria-Medium.ttf"; sourceTree = "<group>"; };
+		B3EEAAAE182D4639AD3957BA /* Arboria-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Arboria-Black.ttf"; path = "../src/assets/fonts/Arboria/Arboria-Black.ttf"; sourceTree = "<group>"; };
+		B9A29CBACC474CA2BC620F22 /* Arboria-BlackItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Arboria-BlackItalic.ttf"; path = "../src/assets/fonts/Arboria/Arboria-BlackItalic.ttf"; sourceTree = "<group>"; };
+		C70C6A6392E340C593079C53 /* Arboria-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Arboria-BoldItalic.ttf"; path = "../src/assets/fonts/Arboria/Arboria-BoldItalic.ttf"; sourceTree = "<group>"; };
+		C89D53EDD5B545B6A8797BDA /* Arboria-Book.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Arboria-Book.ttf"; path = "../src/assets/fonts/Arboria/Arboria-Book.ttf"; sourceTree = "<group>"; };
+		D56803E85F87432396C1C877 /* Arboria-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Arboria-Bold.ttf"; path = "../src/assets/fonts/Arboria/Arboria-Bold.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		10105991F13449D3973FA949 /* Arboria-Black.ttf */ = {isa = PBXFileReference; name = "Arboria-Black.ttf"; path = "../src/assets/fonts/Arboria-Black.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		1EECA17A2E034005965A823C /* Arboria-BlackItalic.ttf */ = {isa = PBXFileReference; name = "Arboria-BlackItalic.ttf"; path = "../src/assets/fonts/Arboria-BlackItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		A9306B5161FA4B86AA58FF34 /* Arboria-Bold.ttf */ = {isa = PBXFileReference; name = "Arboria-Bold.ttf"; path = "../src/assets/fonts/Arboria-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		8A98B45B7C1E448E9D8DA0AF /* Arboria-BoldItalic.ttf */ = {isa = PBXFileReference; name = "Arboria-BoldItalic.ttf"; path = "../src/assets/fonts/Arboria-BoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		E7A0793F84704A669D766360 /* Arboria-Book.ttf */ = {isa = PBXFileReference; name = "Arboria-Book.ttf"; path = "../src/assets/fonts/Arboria-Book.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		E8017ED71CBB45FB88B1916B /* Arboria-BookItalic.ttf */ = {isa = PBXFileReference; name = "Arboria-BookItalic.ttf"; path = "../src/assets/fonts/Arboria-BookItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		69B7039725E84EA2BAA80973 /* Arboria-Light.ttf */ = {isa = PBXFileReference; name = "Arboria-Light.ttf"; path = "../src/assets/fonts/Arboria-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		217C0C017C97475DB78E4583 /* Arboria-LightItalic.ttf */ = {isa = PBXFileReference; name = "Arboria-LightItalic.ttf"; path = "../src/assets/fonts/Arboria-LightItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		A4E0B66A490947458B4BD161 /* Arboria-Medium.ttf */ = {isa = PBXFileReference; name = "Arboria-Medium.ttf"; path = "../src/assets/fonts/Arboria-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		09F36EDF5DC14BE6B9E1A54E /* Arboria-MediumItalic.ttf */ = {isa = PBXFileReference; name = "Arboria-MediumItalic.ttf"; path = "../src/assets/fonts/Arboria-MediumItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		5B642BC236254576BF47FE05 /* Arboria-Thin.ttf */ = {isa = PBXFileReference; name = "Arboria-Thin.ttf"; path = "../src/assets/fonts/Arboria-Thin.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		693F23AEC78A42DE87F3B7CF /* Arboria-ThinItalic.ttf */ = {isa = PBXFileReference; name = "Arboria-ThinItalic.ttf"; path = "../src/assets/fonts/Arboria-ThinItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		DE47E619EE4943FFA3A4D75A /* Hanson-Bold.ttf */ = {isa = PBXFileReference; name = "Hanson-Bold.ttf"; path = "../src/assets/fonts/Hanson-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		F1EA628C37414DAAA06CAAC5 /* Hanson-Bold.otf */ = {isa = PBXFileReference; name = "Hanson-Bold.otf"; path = "../src/assets/fonts/Hanson-Bold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F6B7A9BB936940638DFF95DE /* Arboria-ThinItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Arboria-ThinItalic.ttf"; path = "../src/assets/fonts/Arboria/Arboria-ThinItalic.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +105,26 @@
 				00E356F11AD99517003FC87E /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		09A5BDFAD9E446AEBBE258F9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B3EEAAAE182D4639AD3957BA /* Arboria-Black.ttf */,
+				B9A29CBACC474CA2BC620F22 /* Arboria-BlackItalic.ttf */,
+				D56803E85F87432396C1C877 /* Arboria-Bold.ttf */,
+				C70C6A6392E340C593079C53 /* Arboria-BoldItalic.ttf */,
+				C89D53EDD5B545B6A8797BDA /* Arboria-Book.ttf */,
+				13EE02FBC8504076A13A581E /* Arboria-BookItalic.ttf */,
+				30AA58EE2A19463F9E070061 /* Arboria-Light.ttf */,
+				17129D55C3334A008D8C5B2E /* Arboria-LightItalic.ttf */,
+				A8AE1837F3F1439BA3588B3A /* Arboria-Medium.ttf */,
+				536E89BDCB3A4C868E667BD5 /* Arboria-MediumItalic.ttf */,
+				608D9D4007594A1980B716EB /* Arboria-Thin.ttf */,
+				F6B7A9BB936940638DFF95DE /* Arboria-ThinItalic.ttf */,
+			);
+			name = Resources;
+			path = "";
 			sourceTree = "<group>";
 		};
 		13B07FAE1A68108700A75B9A /* TemJogoApp */ = {
@@ -176,28 +192,6 @@
 			);
 			path = Pods;
 			sourceTree = "<group>";
-		};
-		09A5BDFAD9E446AEBBE258F9 /* Resources */ = {
-			isa = "PBXGroup";
-			children = (
-				10105991F13449D3973FA949 /* Arboria-Black.ttf */,
-				1EECA17A2E034005965A823C /* Arboria-BlackItalic.ttf */,
-				A9306B5161FA4B86AA58FF34 /* Arboria-Bold.ttf */,
-				8A98B45B7C1E448E9D8DA0AF /* Arboria-BoldItalic.ttf */,
-				E7A0793F84704A669D766360 /* Arboria-Book.ttf */,
-				E8017ED71CBB45FB88B1916B /* Arboria-BookItalic.ttf */,
-				69B7039725E84EA2BAA80973 /* Arboria-Light.ttf */,
-				217C0C017C97475DB78E4583 /* Arboria-LightItalic.ttf */,
-				A4E0B66A490947458B4BD161 /* Arboria-Medium.ttf */,
-				09F36EDF5DC14BE6B9E1A54E /* Arboria-MediumItalic.ttf */,
-				5B642BC236254576BF47FE05 /* Arboria-Thin.ttf */,
-				693F23AEC78A42DE87F3B7CF /* Arboria-ThinItalic.ttf */,
-				DE47E619EE4943FFA3A4D75A /* Hanson-Bold.ttf */,
-				F1EA628C37414DAAA06CAAC5 /* Hanson-Bold.otf */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-			path = "";
 		};
 /* End PBXGroup section */
 
@@ -294,20 +288,18 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				CFB691BA135448D6825059EA /* Arboria-Black.ttf in Resources */,
-				333F2E0545EC4098898ABCB8 /* Arboria-BlackItalic.ttf in Resources */,
-				9F1F55F1A7224534A1A87466 /* Arboria-Bold.ttf in Resources */,
-				5D1C06496AF64445B8126184 /* Arboria-BoldItalic.ttf in Resources */,
-				36DE7FD3689B4697962B991E /* Arboria-Book.ttf in Resources */,
-				20F29137ABBB4900A33494FA /* Arboria-BookItalic.ttf in Resources */,
-				411EB8939628451D9FFA3E18 /* Arboria-Light.ttf in Resources */,
-				5C62E38BC4BC45319B1D87F2 /* Arboria-LightItalic.ttf in Resources */,
-				52EBEEBF0E91410FAD9B9A41 /* Arboria-Medium.ttf in Resources */,
-				A0BA6B01679E41A393FB87E1 /* Arboria-MediumItalic.ttf in Resources */,
-				5F53F32D66D9493ABF37A254 /* Arboria-Thin.ttf in Resources */,
-				1EAAE11C1A3F4CC3933E1567 /* Arboria-ThinItalic.ttf in Resources */,
-				98AA6034B9104F35A6CC1DAB /* Hanson-Bold.ttf in Resources */,
-				814D7E71E29D4EABB618E9AD /* Hanson-Bold.otf in Resources */,
+				D7198813F8EB4C21942D7BF3 /* Arboria-Black.ttf in Resources */,
+				A0EEADA3BA6E4124B63F70AF /* Arboria-BlackItalic.ttf in Resources */,
+				B7EA25B55F2644799343727D /* Arboria-Bold.ttf in Resources */,
+				3431DE25B86145C3996204BB /* Arboria-BoldItalic.ttf in Resources */,
+				DF7DCCE892094160A88DF5A8 /* Arboria-Book.ttf in Resources */,
+				72FA153F490944B5B70F0245 /* Arboria-BookItalic.ttf in Resources */,
+				ACACDBDE647B49D6AC2154C9 /* Arboria-Light.ttf in Resources */,
+				81440E9CD26344BDB6EC73E6 /* Arboria-LightItalic.ttf in Resources */,
+				6A6FF00480844B4D83776527 /* Arboria-Medium.ttf in Resources */,
+				E1DFB660E081418890C1A728 /* Arboria-MediumItalic.ttf in Resources */,
+				10454C22E2BC4F7DA0D5E2F5 /* Arboria-Thin.ttf in Resources */,
+				7CF0304CC4A940609C1A83A0 /* Arboria-ThinItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

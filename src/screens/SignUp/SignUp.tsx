@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
     gap: 30,
   },
   text: {
-    fontFamily: 'Hanson-Bold',
+    fontFamily: 'MonumentExtended-Ultrabold',
     fontSize: 24,
     textAlign: 'center',
   },

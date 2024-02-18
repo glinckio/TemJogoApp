@@ -22,7 +22,7 @@ const TopHeader = () => {
           style={[
             {
               color: colors[theme].tertiary.default,
-              fontFamily: 'Hanson-Black',
+              fontFamily: 'MonumentExtended-Ultrabold',
               fontSize: 20,
             },
           ]}>
@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
     marginLeft: -47,
   },
   text: {
-    fontFamily: 'Hanson-Bold',
+    fontFamily: 'MonumentExtended-Ultrabold',
   },
 });
 

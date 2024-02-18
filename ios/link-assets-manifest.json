@@ -48,6 +48,14 @@
     {
       "path": "src/assets/fonts/Arboria/Arboria-ThinItalic.ttf",
       "sha1": "29ba268708785f625d4bde7a7818814422638fee"
+    },
+    {
+      "path": "src/assets/fonts/MonumentExtended/MonumentExtended-Regular.otf",
+      "sha1": "1e787896f58bb8ef3b6d5276f8c6d8da541150d9"
+    },
+    {
+      "path": "src/assets/fonts/MonumentExtended/MonumentExtended-Ultrabold.otf",
+      "sha1": "c34583b8a5b48d6b5e2f657fecdacccf77993835"
     }
   ]
 }

@@ -26,6 +26,8 @@
 		D7198813F8EB4C21942D7BF3 /* Arboria-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B3EEAAAE182D4639AD3957BA /* Arboria-Black.ttf */; };
 		DF7DCCE892094160A88DF5A8 /* Arboria-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C89D53EDD5B545B6A8797BDA /* Arboria-Book.ttf */; };
 		E1DFB660E081418890C1A728 /* Arboria-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 536E89BDCB3A4C868E667BD5 /* Arboria-MediumItalic.ttf */; };
+		BBE92226E44D40588BD78D78 /* MonumentExtended-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 091EE8A1CFEC45D880E7498F /* MonumentExtended-Regular.otf */; };
+		B0FCD99C06C04060A86660FC /* MonumentExtended-Ultrabold.otf in Resources */ = {isa = PBXBuildFile; fileRef = ADE662B31EFC4A788030539B /* MonumentExtended-Ultrabold.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,8 @@
 		D56803E85F87432396C1C877 /* Arboria-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Arboria-Bold.ttf"; path = "../src/assets/fonts/Arboria/Arboria-Bold.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		F6B7A9BB936940638DFF95DE /* Arboria-ThinItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Arboria-ThinItalic.ttf"; path = "../src/assets/fonts/Arboria/Arboria-ThinItalic.ttf"; sourceTree = "<group>"; };
+		091EE8A1CFEC45D880E7498F /* MonumentExtended-Regular.otf */ = {isa = PBXFileReference; name = "MonumentExtended-Regular.otf"; path = "../src/assets/fonts/MonumentExtended/MonumentExtended-Regular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		ADE662B31EFC4A788030539B /* MonumentExtended-Ultrabold.otf */ = {isa = PBXFileReference; name = "MonumentExtended-Ultrabold.otf"; path = "../src/assets/fonts/MonumentExtended/MonumentExtended-Ultrabold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +126,8 @@
 				536E89BDCB3A4C868E667BD5 /* Arboria-MediumItalic.ttf */,
 				608D9D4007594A1980B716EB /* Arboria-Thin.ttf */,
 				F6B7A9BB936940638DFF95DE /* Arboria-ThinItalic.ttf */,
+				091EE8A1CFEC45D880E7498F /* MonumentExtended-Regular.otf */,
+				ADE662B31EFC4A788030539B /* MonumentExtended-Ultrabold.otf */,
 			);
 			name = Resources;
 			path = "";
@@ -300,6 +306,8 @@
 				E1DFB660E081418890C1A728 /* Arboria-MediumItalic.ttf in Resources */,
 				10454C22E2BC4F7DA0D5E2F5 /* Arboria-Thin.ttf in Resources */,
 				7CF0304CC4A940609C1A83A0 /* Arboria-ThinItalic.ttf in Resources */,
+				BBE92226E44D40588BD78D78 /* MonumentExtended-Regular.otf in Resources */,
+				B0FCD99C06C04060A86660FC /* MonumentExtended-Ultrabold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

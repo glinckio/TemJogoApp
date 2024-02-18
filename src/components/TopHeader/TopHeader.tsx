@@ -1,7 +1,6 @@
 import React from 'react';
 import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
-import {SafeAreaView} from 'react-native-safe-area-context';
 import {colors} from '../../utils/colors';
 import {useRootState} from '../../context/RootContext';
 
@@ -11,7 +10,9 @@ const TopHeader = () => {
 
   return (
     <View style={styles.container}>
-      <TouchableOpacity onPress={() => navigation.goBack()}>
+      <TouchableOpacity
+        onPress={() => navigation.goBack()}
+        style={styles.arrowLeft}>
         <Image
           style={styles.inputIcon}
           source={require('../../assets/icons/fi-rr-angle-small-left.png')}
@@ -20,10 +21,9 @@ const TopHeader = () => {
       <View style={styles.textContainer}>
         <Text
           style={[
+            styles.text,
             {
               color: colors[theme].tertiary.default,
-              fontFamily: 'MonumentExtended-Ultrabold',
-              fontSize: 20,
             },
           ]}>
           TemJogo
@@ -52,6 +52,10 @@ const styles = StyleSheet.create({
   },
   text: {
     fontFamily: 'MonumentExtended-Ultrabold',
+    fontSize: 20,
+  },
+  arrowLeft: {
+    zIndex: 1,
   },
 });
 

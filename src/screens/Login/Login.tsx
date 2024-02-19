@@ -86,16 +86,14 @@ const LoginScreen = ({navigation}: any) => {
                 ]}>
                 {content.dontHaveAnAccount}
               </Text>
-              <TouchableOpacity
+              <Text
+                style={[
+                  styles.signUptext,
+                  {color: colors[theme].primary.default},
+                ]}
                 onPress={() => navigation.navigate(RoutesEnum.SignUp)}>
-                <Text
-                  style={[
-                    styles.signUptext,
-                    {color: colors[theme].primary.default},
-                  ]}>
-                  {content.signUp}
-                </Text>
-              </TouchableOpacity>
+                {content.signUp}
+              </Text>
             </View>
           </View>
         </View>

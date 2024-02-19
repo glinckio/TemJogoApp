@@ -15,10 +15,11 @@ const TermsAndConditions = ({navigation}: any) => {
       />
       <View style={styles.textContainer}>
         <Text style={styles.text}>{content.readAndAgree}</Text>
-        <TouchableOpacity
+        <Text
+          style={styles.highlightText}
           onPress={() => navigation.navigate(RoutesEnum.TermsAndConditions)}>
-          <Text style={styles.highlightText}>{content.termsAndConditions}</Text>
-        </TouchableOpacity>
+          {content.termsAndConditions}
+        </Text>
       </View>
     </View>
   );

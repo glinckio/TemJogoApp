@@ -60,9 +60,10 @@ const LoginScreen = ({navigation}: any) => {
                     />
                   }
                 />
-                <PrimaryButton title={content.loginButton} />
+                <PrimaryButton onPress={() => {}} title={content.loginButton} />
               </View>
-              <TouchableOpacity>
+              <TouchableOpacity
+                onPress={() => navigation.navigate(RoutesEnum.PasswordReset)}>
                 <Text
                   style={[
                     styles.forgotPassword,

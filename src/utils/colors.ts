@@ -8,6 +8,7 @@ interface Colors {
     default: string;
     dark: string;
     light: string;
+    gray: string;
   };
   tertiary: {
     default: string;
@@ -27,6 +28,7 @@ export const colors: ColorsTypes = {
       default: '#1D1C1C',
       dark: '#282727',
       light: '#3F3E3E',
+      gray: '#8C8B8B',
     },
     tertiary: {
       default: '#F4F4F4',
@@ -40,6 +42,7 @@ export const colors: ColorsTypes = {
       default: '#F4F4F4',
       dark: '#E0E0E0',
       light: '#D1D1D1',
+      gray: '#8C8B8B',
     },
     tertiary: {
       default: '#1D1C1C',

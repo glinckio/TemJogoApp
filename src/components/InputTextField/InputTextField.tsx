@@ -43,6 +43,7 @@ const styles = StyleSheet.create({
     paddingLeft: 28,
     flexDirection: 'row',
     alignItems: 'center',
+    width: '100%',
   },
   icon: {
     marginRight: 10,

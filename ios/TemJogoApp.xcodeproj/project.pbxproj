@@ -22,12 +22,12 @@
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		A0EEADA3BA6E4124B63F70AF /* Arboria-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9A29CBACC474CA2BC620F22 /* Arboria-BlackItalic.ttf */; };
 		ACACDBDE647B49D6AC2154C9 /* Arboria-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 30AA58EE2A19463F9E070061 /* Arboria-Light.ttf */; };
+		B0FCD99C06C04060A86660FC /* MonumentExtended-Ultrabold.otf in Resources */ = {isa = PBXBuildFile; fileRef = ADE662B31EFC4A788030539B /* MonumentExtended-Ultrabold.otf */; };
 		B7EA25B55F2644799343727D /* Arboria-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D56803E85F87432396C1C877 /* Arboria-Bold.ttf */; };
+		BBE92226E44D40588BD78D78 /* MonumentExtended-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 091EE8A1CFEC45D880E7498F /* MonumentExtended-Regular.otf */; };
 		D7198813F8EB4C21942D7BF3 /* Arboria-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B3EEAAAE182D4639AD3957BA /* Arboria-Black.ttf */; };
 		DF7DCCE892094160A88DF5A8 /* Arboria-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C89D53EDD5B545B6A8797BDA /* Arboria-Book.ttf */; };
 		E1DFB660E081418890C1A728 /* Arboria-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 536E89BDCB3A4C868E667BD5 /* Arboria-MediumItalic.ttf */; };
-		BBE92226E44D40588BD78D78 /* MonumentExtended-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 091EE8A1CFEC45D880E7498F /* MonumentExtended-Regular.otf */; };
-		B0FCD99C06C04060A86660FC /* MonumentExtended-Ultrabold.otf in Resources */ = {isa = PBXBuildFile; fileRef = ADE662B31EFC4A788030539B /* MonumentExtended-Ultrabold.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +44,7 @@
 		00E356EE1AD99517003FC87E /* TemJogoAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TemJogoAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* TemJogoAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TemJogoAppTests.m; sourceTree = "<group>"; };
+		091EE8A1CFEC45D880E7498F /* MonumentExtended-Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "MonumentExtended-Regular.otf"; path = "../src/assets/fonts/MonumentExtended/MonumentExtended-Regular.otf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* TemJogoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TemJogoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = TemJogoApp/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = TemJogoApp/AppDelegate.mm; sourceTree = "<group>"; };
@@ -63,6 +64,7 @@
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = TemJogoApp/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-TemJogoApp-TemJogoAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TemJogoApp-TemJogoAppTests.release.xcconfig"; path = "Target Support Files/Pods-TemJogoApp-TemJogoAppTests/Pods-TemJogoApp-TemJogoAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		A8AE1837F3F1439BA3588B3A /* Arboria-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Arboria-Medium.ttf"; path = "../src/assets/fonts/Arboria/Arboria-Medium.ttf"; sourceTree = "<group>"; };
+		ADE662B31EFC4A788030539B /* MonumentExtended-Ultrabold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "MonumentExtended-Ultrabold.otf"; path = "../src/assets/fonts/MonumentExtended/MonumentExtended-Ultrabold.otf"; sourceTree = "<group>"; };
 		B3EEAAAE182D4639AD3957BA /* Arboria-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Arboria-Black.ttf"; path = "../src/assets/fonts/Arboria/Arboria-Black.ttf"; sourceTree = "<group>"; };
 		B9A29CBACC474CA2BC620F22 /* Arboria-BlackItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Arboria-BlackItalic.ttf"; path = "../src/assets/fonts/Arboria/Arboria-BlackItalic.ttf"; sourceTree = "<group>"; };
 		C70C6A6392E340C593079C53 /* Arboria-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Arboria-BoldItalic.ttf"; path = "../src/assets/fonts/Arboria/Arboria-BoldItalic.ttf"; sourceTree = "<group>"; };
@@ -70,8 +72,6 @@
 		D56803E85F87432396C1C877 /* Arboria-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Arboria-Bold.ttf"; path = "../src/assets/fonts/Arboria/Arboria-Bold.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		F6B7A9BB936940638DFF95DE /* Arboria-ThinItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Arboria-ThinItalic.ttf"; path = "../src/assets/fonts/Arboria/Arboria-ThinItalic.ttf"; sourceTree = "<group>"; };
-		091EE8A1CFEC45D880E7498F /* MonumentExtended-Regular.otf */ = {isa = PBXFileReference; name = "MonumentExtended-Regular.otf"; path = "../src/assets/fonts/MonumentExtended/MonumentExtended-Regular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		ADE662B31EFC4A788030539B /* MonumentExtended-Ultrabold.otf */ = {isa = PBXFileReference; name = "MonumentExtended-Ultrabold.otf"; path = "../src/assets/fonts/MonumentExtended/MonumentExtended-Ultrabold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -637,13 +637,17 @@
 				);
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_CFLAGS = "$(inherited)";
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					" ",
+				);
 				OTHER_CPLUSPLUSFLAGS = (
 					"$(OTHER_CFLAGS)",
 					"-DFOLLY_NO_CONFIG",
 					"-DFOLLY_MOBILE=1",
 					"-DFOLLY_USE_LIBCPP=1",
 					"-DFOLLY_CFG_NO_COROUTINES=1",
+					" ",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -708,13 +712,17 @@
 					"\"$(inherited)\"",
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_CFLAGS = "$(inherited)";
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					" ",
+				);
 				OTHER_CPLUSPLUSFLAGS = (
 					"$(OTHER_CFLAGS)",
 					"-DFOLLY_NO_CONFIG",
 					"-DFOLLY_MOBILE=1",
 					"-DFOLLY_USE_LIBCPP=1",
 					"-DFOLLY_CFG_NO_COROUTINES=1",
+					" ",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",

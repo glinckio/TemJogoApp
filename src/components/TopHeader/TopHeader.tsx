@@ -4,9 +4,15 @@ import {useNavigation} from '@react-navigation/native';
 import {colors} from '../../utils/colors';
 import {useRootState} from '../../context/RootContext';
 
-const TopHeader = () => {
+type TopHeaderTypes = {
+  light?: boolean;
+};
+
+const TopHeader = ({light}: TopHeaderTypes) => {
   const {theme} = useRootState();
   const navigation = useNavigation();
+  const lightIcon = require('../../assets/icons/fi-rr-angle-small-left-light.png');
+  const defaultIcon = require('../../assets/icons/fi-rr-angle-small-left.png');
 
   return (
     <View style={styles.container}>
@@ -15,7 +21,7 @@ const TopHeader = () => {
         style={styles.arrowLeft}>
         <Image
           style={styles.inputIcon}
-          source={require('../../assets/icons/fi-rr-angle-small-left.png')}
+          source={light ? lightIcon : defaultIcon}
         />
       </TouchableOpacity>
       <View style={styles.textContainer}>
@@ -23,7 +29,9 @@ const TopHeader = () => {
           style={[
             styles.text,
             {
-              color: colors[theme].tertiary.default,
+              color: light
+                ? colors[theme].secondary.default
+                : colors[theme].tertiary.default,
             },
           ]}>
           TemJogo

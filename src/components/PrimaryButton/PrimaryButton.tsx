@@ -6,11 +6,15 @@ import {colors} from '../../utils/colors';
 
 type PrimaryButtonType = {
   title: string;
+  onPress: (callback: unknown) => void;
 };
 
-const PrimaryButton = ({title}: PrimaryButtonType) => {
+const PrimaryButton = ({title, onPress}: PrimaryButtonType) => {
   return (
-    <TouchableOpacity testID={content.testID} style={styles.button}>
+    <TouchableOpacity
+      onPress={onPress}
+      testID={content.testID}
+      style={styles.button}>
       <Text style={styles.text}>{title}</Text>
     </TouchableOpacity>
   );
@@ -23,6 +27,7 @@ const styles = StyleSheet.create({
     paddingTop: 18,
     paddingBottom: 18,
     borderRadius: 48,
+    width: '100%',
   },
   text: {
     color: colors.dark.tertiary.default,

@@ -28,7 +28,7 @@ const VerifyEmailScreen = ({navigation}: any) => {
       </View>
       <View style={styles.tryAnotherEmail}>
         <View>
-          <Text style={[styles.text]}>
+          <Text style={styles.text}>
             Não recebeu o e-mail? Verifique seu filtro de spam, ou
             <Text
               onPress={() => navigation.navigate(RoutesEnum.PasswordReset)}

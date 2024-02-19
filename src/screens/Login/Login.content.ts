@@ -5,7 +5,7 @@ export const content = {
     password: 'senha',
   },
   loginButton: 'Entrar',
-  forgotYourPassword: 'esqueceu sua senha?',
+  forgotYourPassword: 'Esqueceu sua senha?',
   dontHaveAnAccount: 'Não tem uma conta?',
   signUp: 'Cadastre-se',
 };

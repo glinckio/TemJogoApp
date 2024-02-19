@@ -1,6 +1,13 @@
-import React from 'react';
+import React, {useState} from 'react';
 
-import {StyleSheet, TextInput, View} from 'react-native';
+import {
+  Image,
+  StyleSheet,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import {content} from './InputTextField.content';
 import {colors} from '../../utils/colors';
 import {useRootState} from '../../context/RootContext';
@@ -9,6 +16,7 @@ type InputTextFieldType = {
   icon?: React.JSX.Element;
   placeholder?: string;
   text: string;
+  password?: boolean;
   onChangeText: (str: string) => void;
 };
 
@@ -17,8 +25,12 @@ const InputTextField = ({
   placeholder,
   text,
   onChangeText,
+  password,
 }: InputTextFieldType) => {
+  const [hide, setHide] = useState(true);
   const {theme} = useRootState();
+  const hideIcon = require('../../assets/icons/fi-rr-eye-closed.png');
+  const showIcon = require('../../assets/icons/fi-rr-eye.png');
 
   return (
     <View testID={content.testID} style={styles.container}>
@@ -26,10 +38,19 @@ const InputTextField = ({
       <TextInput
         style={[styles.input, {color: colors.dark.tertiary.default}]}
         value={text}
+        secureTextEntry={hide ?? true}
         onChangeText={onChangeText}
         placeholder={placeholder ?? ''}
         placeholderTextColor={colors[theme].secondary.light}
       />
+      {password && (
+        <TouchableOpacity onPress={() => setHide(!hide)}>
+          <Image
+            style={styles.showHideIcon}
+            source={hide ? hideIcon : showIcon}
+          />
+        </TouchableOpacity>
+      )}
     </View>
   );
 };
@@ -40,10 +61,12 @@ const styles = StyleSheet.create({
     borderRadius: 48,
     paddingTop: 14,
     paddingBottom: 14,
-    paddingLeft: 28,
+    paddingLeft: 22,
+    paddingRight: 22,
     flexDirection: 'row',
     alignItems: 'center',
     width: '100%',
+    justifyContent: 'space-between',
   },
   icon: {
     marginRight: 10,
@@ -52,6 +75,11 @@ const styles = StyleSheet.create({
     borderRadius: 48,
     fontSize: 20,
     fontFamily: 'Arboria-Bold',
+    flex: 1,
+  },
+  showHideIcon: {
+    width: 16,
+    height: 16,
   },
 });
 

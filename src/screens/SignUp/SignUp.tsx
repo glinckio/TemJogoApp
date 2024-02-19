@@ -65,11 +65,13 @@ const SignUpScreen = ({navigation}: any) => {
             text={password}
             onChangeText={setPassword}
             placeholder={content.fields.password}
+            password
           />
           <InputTextField
             text={confirmPassword}
             onChangeText={setConfirmPassword}
             placeholder={content.fields.confirmPassword}
+            password
           />
           <View style={styles.termsAndConditionsContainer}>
             <TermsAndConditions navigation={navigation} />

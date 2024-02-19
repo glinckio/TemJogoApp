@@ -82,7 +82,7 @@ const LoginScreen = ({navigation}: any) => {
               <Text
                 style={[
                   styles.noAccountText,
-                  {color: colors[theme].tertiary.default},
+                  {color: colors[theme].secondary.gray},
                 ]}>
                 {content.dontHaveAnAccount}
               </Text>
@@ -159,6 +159,7 @@ const styles = StyleSheet.create({
   },
   noAccountText: {
     marginRight: 6,
+    fontSize: 12,
   },
   signUptext: {
     fontFamily: 'Arboria-Bold',

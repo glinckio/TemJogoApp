@@ -22,7 +22,7 @@ const LoginScreen = ({navigation}: any) => {
   const {theme} = useRootState();
 
   return (
-    <Template>
+    <Template testID={content.testID}>
       <ScrollView contentContainerStyle={styles.container}>
         <View style={styles.wrapper}>
           <View style={styles.formContainer}>

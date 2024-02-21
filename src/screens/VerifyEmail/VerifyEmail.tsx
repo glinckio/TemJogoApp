@@ -10,7 +10,7 @@ const VerifyEmailScreen = ({navigation}: any) => {
   const {theme} = useRootState();
 
   return (
-    <Template>
+    <Template testID={content.testID}>
       <View style={styles.container}>
         <View style={styles.emailContainer}>
           <Image

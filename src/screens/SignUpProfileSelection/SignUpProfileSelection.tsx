@@ -10,9 +10,9 @@ const SignUpProfileSelectionScreen = () => {
   const {theme} = useRootState();
 
   return (
-    <Template>
+    <Template testID={content.testID}>
       <TopHeader />
-      <View style={styles.container} testID={content.testID}>
+      <View style={styles.container}>
         <View>
           <Text style={[styles.text, {color: colors[theme].tertiary.default}]}>
             {content.yourRegistration}

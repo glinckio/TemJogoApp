@@ -2,16 +2,17 @@ import React from 'react';
 import TopHeader from '../../components/TopHeader/TopHeader';
 import Template from '../../components/Template/Template';
 import {ScrollView, StyleSheet, Text, View} from 'react-native';
+import {content} from './TermsAndConditions.content';
 
 const TermsAndConditionsScreen = () => {
   return (
-    <Template light>
+    <Template light testID={content.testID}>
       <View style={styles.topHeaderContainer}>
         <TopHeader light />
       </View>
       <ScrollView>
         <View style={styles.container}>
-          <Text style={styles.textTitle}>Termos e condições de uso</Text>
+          <Text style={styles.textTitle}>{content.title}</Text>
           <Text style={styles.longText}>
             Os presentes termos e condições de uso visam regular a utilização
             por você, usuário, de nossos serviços pelos sítio eletrônico

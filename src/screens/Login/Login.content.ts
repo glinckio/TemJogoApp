@@ -1,4 +1,5 @@
 export const content = {
+  testID: 'login-testId',
   title: 'Login',
   fields: {
     name: 'name',

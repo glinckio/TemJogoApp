@@ -12,9 +12,9 @@ const PasswordResetScreen = () => {
   const {theme} = useRootState();
 
   return (
-    <Template>
+    <Template testID={content.testID}>
       <TopHeader />
-      <View style={styles.container} testID={content.testID}>
+      <View style={styles.container}>
         <Text
           style={[styles.textTitle, {color: colors[theme].tertiary.default}]}>
           {content.title}

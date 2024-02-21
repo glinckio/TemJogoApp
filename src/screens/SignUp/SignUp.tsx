@@ -41,10 +41,10 @@ const SignUpScreen = ({navigation}: any) => {
   }, []);
 
   return (
-    <Template>
+    <Template testID={content.testID}>
       <TopHeader />
       <ScrollView>
-        <View testID={content.testID} style={styles.container}>
+        <View style={styles.container}>
           <TouchableOpacity style={styles.buttonImage} onPress={pickImage}>
             {!image && (
               <Image style={styles.image} source={defaultImageUploader} />

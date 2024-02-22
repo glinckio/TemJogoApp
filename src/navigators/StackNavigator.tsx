@@ -12,6 +12,7 @@ import PasswordResetScreen from '../screens/PasswordReset/PasswordReset';
 import VerifyEmailScreen from '../screens/VerifyEmail/VerifyEmail';
 import NewPasswordScreen from '../screens/NewPassword/NewPassword';
 import OtpPhoneScreen from '../screens/OtpPhone/OtpPhone';
+import OtpVerificationScreen from '../screens/OtpVerification/OtpVerification';
 
 export enum RoutesEnum {
   Login = 'Login',
@@ -22,6 +23,7 @@ export enum RoutesEnum {
   VerifyEmail = 'VerifyEmail',
   NewPassword = 'NewPassword',
   OtpPhone = 'OtpPhone',
+  OtpVerification = 'OtpVerification',
 }
 
 export type RootStackParamList = {
@@ -33,6 +35,7 @@ export type RootStackParamList = {
   VerifyEmail: undefined;
   NewPassword: undefined;
   OtpPhone: undefined;
+  OtpVerification: undefined;
 };
 
 export const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -43,7 +46,7 @@ const StackNavigator = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName={RoutesEnum.OtpPhone}
+        initialRouteName={RoutesEnum.OtpVerification}
         screenOptions={{
           headerShown: false,
         }}>
@@ -70,6 +73,10 @@ const StackNavigator = () => {
           component={NewPasswordScreen}
         />
         <Stack.Screen name={RoutesEnum.OtpPhone} component={OtpPhoneScreen} />
+        <Stack.Screen
+          name={RoutesEnum.OtpVerification}
+          component={OtpVerificationScreen}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

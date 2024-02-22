@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import Template from '../../components/Template/Template';
 import TopHeader from '../../components/TopHeader/TopHeader';
-import {StyleSheet, Text, View} from 'react-native';
+import {ScrollView, StyleSheet, Text, View} from 'react-native';
 import {colors} from '../../utils/colors';
 import {useRootState} from '../../context/RootContext';
 import {content} from './OtpPhone.content';
@@ -15,7 +15,7 @@ const OtpPhoneScreen = () => {
   return (
     <Template>
       <TopHeader />
-      <View style={styles.container}>
+      <ScrollView contentContainerStyle={styles.container}>
         <View>
           <Text
             style={[styles.textTitle, {color: colors[theme].tertiary.default}]}>
@@ -34,7 +34,7 @@ const OtpPhoneScreen = () => {
           </View>
         </View>
         <PrimaryButton onPress={() => {}} title={content.buttonText} />
-      </View>
+      </ScrollView>
     </Template>
   );
 };

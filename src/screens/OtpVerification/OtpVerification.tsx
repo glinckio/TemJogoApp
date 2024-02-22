@@ -1,7 +1,7 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Template from '../../components/Template/Template';
 import TopHeader from '../../components/TopHeader/TopHeader';
-import {StyleSheet, Text, View} from 'react-native';
+import {ScrollView, StyleSheet, Text, View} from 'react-native';
 import {colors} from '../../utils/colors';
 import {useRootState} from '../../context/RootContext';
 import {content} from './OtpVerification.content';
@@ -14,7 +14,7 @@ const OtpVerificationScreen = () => {
   return (
     <Template testID={content.testID}>
       <TopHeader />
-      <View style={styles.container}>
+      <ScrollView contentContainerStyle={styles.container}>
         <View>
           <Text
             style={[styles.textTitle, {color: colors[theme].tertiary.default}]}>
@@ -39,7 +39,7 @@ const OtpVerificationScreen = () => {
           </View>
         </View>
         <PrimaryButton onPress={() => {}} title={content.buttonText} />
-      </View>
+      </ScrollView>
     </Template>
   );
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Image, StyleSheet, Text, View} from 'react-native';
+import {Image, ScrollView, StyleSheet, Text, View} from 'react-native';
 import Template from '../../components/Template/Template';
 import {content} from './VerifyEmail.content';
 import {colors} from '../../utils/colors';
@@ -11,7 +11,7 @@ const VerifyEmailScreen = ({navigation}: any) => {
 
   return (
     <Template testID={content.testID}>
-      <View style={styles.container}>
+      <ScrollView contentContainerStyle={styles.container}>
         <View style={styles.emailContainer}>
           <Image
             style={styles.img}
@@ -25,20 +25,20 @@ const VerifyEmailScreen = ({navigation}: any) => {
             {content.longText}
           </Text>
         </View>
-      </View>
-      <View style={styles.tryAnotherEmail}>
-        <View>
-          <Text style={styles.text}>
-            Não recebeu o e-mail? Verifique seu filtro de spam, ou
-            <Text
-              onPress={() => navigation.navigate(RoutesEnum.PasswordReset)}
-              style={[styles.text, styles.highlightText]}>
-              {' '}
-              tente outro endereço de e-mail
+        <View style={styles.tryAnotherEmail}>
+          <View>
+            <Text style={styles.text}>
+              {content.didntReceiveEmail}
+              <Text
+                onPress={() => navigation.navigate(RoutesEnum.PasswordReset)}
+                style={[styles.text, styles.highlightText]}>
+                {' '}
+                {content.tryAnotherEmail}
+              </Text>
             </Text>
-          </Text>
+          </View>
         </View>
-      </View>
+      </ScrollView>
     </Template>
   );
 };

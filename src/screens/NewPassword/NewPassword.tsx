@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {ScrollView, StyleSheet, Text, View} from 'react-native';
 import Template from '../../components/Template/Template';
 import {colors} from '../../utils/colors';
 import {useRootState} from '../../context/RootContext';
@@ -17,7 +17,7 @@ const NewPasswordScreen = () => {
   return (
     <Template testID={content.testID}>
       <TopHeader navigateToScreen={RoutesEnum.PasswordReset} />
-      <View style={styles.container}>
+      <ScrollView contentContainerStyle={styles.container}>
         <View style={styles.formContainer}>
           <Text style={[styles.title, {color: colors[theme].tertiary.default}]}>
             {content.title}
@@ -44,7 +44,7 @@ const NewPasswordScreen = () => {
           </View>
         </View>
         <PrimaryButton onPress={() => {}} title={content.buttonText} />
-      </View>
+      </ScrollView>
     </Template>
   );
 };

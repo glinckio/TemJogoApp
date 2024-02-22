@@ -46,7 +46,7 @@ const StackNavigator = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName={RoutesEnum.OtpVerification}
+        initialRouteName={RoutesEnum.NewPassword}
         screenOptions={{
           headerShown: false,
         }}>

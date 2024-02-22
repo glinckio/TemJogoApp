@@ -1,13 +1,14 @@
 import React from 'react';
-import {StyleSheet, Text, TextInput, View} from 'react-native';
+import {StyleSheet, TextInput, View} from 'react-native';
 import {colors} from '../../utils/colors';
 import {useRootState} from '../../context/RootContext';
+import {content} from './OtpForm.content';
 
 const OtpForm = () => {
   const {theme} = useRootState();
 
   return (
-    <View style={styles.container}>
+    <View testID={content.testID} style={styles.container}>
       <TextInput
         style={[
           styles.input,

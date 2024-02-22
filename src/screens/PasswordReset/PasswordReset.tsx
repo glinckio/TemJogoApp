@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {StyleSheet, Text, TextInput, View} from 'react-native';
+import {ScrollView, StyleSheet, Text, TextInput, View} from 'react-native';
 import Template from '../../components/Template/Template';
 import TopHeader from '../../components/TopHeader/TopHeader';
 import {colors} from '../../utils/colors';
@@ -15,7 +15,7 @@ const PasswordResetScreen = () => {
   return (
     <Template testID={content.testID}>
       <TopHeader navigateToScreen={RoutesEnum.Login} />
-      <View style={styles.container}>
+      <ScrollView contentContainerStyle={styles.container}>
         <Text
           style={[styles.textTitle, {color: colors[theme].tertiary.default}]}>
           {content.title}
@@ -46,7 +46,7 @@ const PasswordResetScreen = () => {
         <View style={styles.sendInstructionsContainer}>
           <PrimaryButton onPress={() => {}} title={content.sendStructions} />
         </View>
-      </View>
+      </ScrollView>
     </Template>
   );
 };

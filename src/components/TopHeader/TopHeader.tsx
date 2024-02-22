@@ -4,6 +4,7 @@ import {useNavigation} from '@react-navigation/native';
 import {colors} from '../../utils/colors';
 import {useRootState} from '../../context/RootContext';
 import {RoutesEnum} from '../../navigators/StackNavigator';
+import {content} from './TopHeader.content';
 
 type TopHeaderTypes = {
   light?: boolean;
@@ -17,7 +18,7 @@ const TopHeader = ({light, navigateToScreen}: TopHeaderTypes) => {
   const defaultIcon = require('../../assets/icons/fi-rr-angle-small-left.png');
 
   return (
-    <View style={styles.container}>
+    <View style={styles.container} testID={content.testID}>
       <TouchableOpacity
         onPress={() =>
           navigateToScreen
@@ -40,7 +41,7 @@ const TopHeader = ({light, navigateToScreen}: TopHeaderTypes) => {
                 : colors[theme].tertiary.default,
             },
           ]}>
-          TemJogo
+          {content.title}
         </Text>
       </View>
     </View>

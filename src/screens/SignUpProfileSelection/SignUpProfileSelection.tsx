@@ -1,5 +1,12 @@
 import React from 'react';
-import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {
+  Image,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import TopHeader from '../../components/TopHeader/TopHeader';
 import {useRootState} from '../../context/RootContext';
 import Template from '../../components/Template/Template';
@@ -12,7 +19,7 @@ const SignUpProfileSelectionScreen = () => {
   return (
     <Template testID={content.testID}>
       <TopHeader />
-      <View style={styles.container}>
+      <ScrollView contentContainerStyle={styles.container}>
         <View>
           <Text style={[styles.text, {color: colors[theme].tertiary.default}]}>
             {content.yourRegistration}
@@ -33,7 +40,7 @@ const SignUpProfileSelectionScreen = () => {
             source={require('../../assets/img/player.png')}
           />
         </TouchableOpacity>
-      </View>
+      </ScrollView>
     </Template>
   );
 };

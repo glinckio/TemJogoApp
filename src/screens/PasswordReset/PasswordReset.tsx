@@ -6,6 +6,7 @@ import {colors} from '../../utils/colors';
 import {useRootState} from '../../context/RootContext';
 import PrimaryButton from '../../components/PrimaryButton/PrimaryButton';
 import {content} from './PasswordReset.content';
+import {RoutesEnum} from '../../navigators/StackNavigator';
 
 const PasswordResetScreen = () => {
   const [email, setEmail] = useState<string>('');
@@ -13,7 +14,7 @@ const PasswordResetScreen = () => {
 
   return (
     <Template testID={content.testID}>
-      <TopHeader />
+      <TopHeader navigateToScreen={RoutesEnum.Login} />
       <View style={styles.container}>
         <Text
           style={[styles.textTitle, {color: colors[theme].tertiary.default}]}>

@@ -3,12 +3,14 @@ import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import {colors} from '../../utils/colors';
 import {useRootState} from '../../context/RootContext';
+import {RoutesEnum} from '../../navigators/StackNavigator';
 
 type TopHeaderTypes = {
   light?: boolean;
+  navigateToScreen?: string;
 };
 
-const TopHeader = ({light}: TopHeaderTypes) => {
+const TopHeader = ({light, navigateToScreen}: TopHeaderTypes) => {
   const {theme} = useRootState();
   const navigation = useNavigation();
   const lightIcon = require('../../assets/icons/fi-rr-angle-small-left-light.png');
@@ -17,7 +19,11 @@ const TopHeader = ({light}: TopHeaderTypes) => {
   return (
     <View style={styles.container}>
       <TouchableOpacity
-        onPress={() => navigation.goBack()}
+        onPress={() =>
+          navigateToScreen
+            ? navigation.navigate(RoutesEnum[navigateToScreen as never])
+            : navigation.goBack()
+        }
         style={styles.arrowLeft}>
         <Image
           style={styles.inputIcon}

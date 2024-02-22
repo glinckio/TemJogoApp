@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import React, {useState} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import Template from '../../components/Template/Template';
 import {colors} from '../../utils/colors';
@@ -7,6 +7,7 @@ import {content} from './NewPassword.content';
 import PrimaryButton from '../../components/PrimaryButton/PrimaryButton';
 import VariantInpuTextField from '../../components/VariantInpuTextField/VariantInpuTextField';
 import TopHeader from '../../components/TopHeader/TopHeader';
+import {RoutesEnum} from '../../navigators/StackNavigator';
 
 const NewPasswordScreen = () => {
   const {theme} = useRootState();
@@ -15,7 +16,7 @@ const NewPasswordScreen = () => {
 
   return (
     <Template testID={content.testID}>
-      <TopHeader />
+      <TopHeader navigateToScreen={RoutesEnum.PasswordReset} />
       <View style={styles.container}>
         <View style={styles.formContainer}>
           <Text style={[styles.title, {color: colors[theme].tertiary.default}]}>

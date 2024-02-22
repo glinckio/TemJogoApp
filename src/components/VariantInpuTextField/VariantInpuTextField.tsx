@@ -20,6 +20,7 @@ type VariantInpuTextFieldType = {
   password?: boolean;
   info?: string;
   error?: boolean;
+  placeholder?: string;
   onChangeText: (str: string) => void;
 };
 
@@ -31,6 +32,7 @@ const VariantInpuTextField = ({
   password,
   info,
   error,
+  placeholder,
 }: VariantInpuTextFieldType) => {
   const [hide, setHide] = useState(true);
   const {theme} = useRootState();
@@ -39,9 +41,11 @@ const VariantInpuTextField = ({
 
   return (
     <View testID={content.testID}>
-      <Text style={[styles.label, {color: colors[theme].tertiary.default}]}>
-        {label}
-      </Text>
+      {label && (
+        <Text style={[styles.label, {color: colors[theme].tertiary.default}]}>
+          {label}
+        </Text>
+      )}
       <View
         style={[
           styles.container,
@@ -53,6 +57,8 @@ const VariantInpuTextField = ({
           value={text}
           secureTextEntry={hide ?? true}
           onChangeText={onChangeText}
+          placeholder={placeholder ?? ''}
+          placeholderTextColor={colors[theme].secondary.light}
         />
         {password && (
           <TouchableOpacity onPress={() => setHide(!hide)}>

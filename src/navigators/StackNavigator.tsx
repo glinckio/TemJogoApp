@@ -11,6 +11,7 @@ import TermsAndConditionsScreen from '../screens/TermsAndConditions/TermsAndCond
 import PasswordResetScreen from '../screens/PasswordReset/PasswordReset';
 import VerifyEmailScreen from '../screens/VerifyEmail/VerifyEmail';
 import NewPasswordScreen from '../screens/NewPassword/NewPassword';
+import OtpPhoneScreen from '../screens/OtpPhone/OtpPhone';
 
 export enum RoutesEnum {
   Login = 'Login',
@@ -20,6 +21,7 @@ export enum RoutesEnum {
   PasswordReset = 'PasswordReset',
   VerifyEmail = 'VerifyEmail',
   NewPassword = 'NewPassword',
+  OtpPhone = 'OtpPhone',
 }
 
 export type RootStackParamList = {
@@ -30,6 +32,7 @@ export type RootStackParamList = {
   PasswordReset: undefined;
   VerifyEmail: undefined;
   NewPassword: undefined;
+  OtpPhone: undefined;
 };
 
 export const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -40,7 +43,7 @@ const StackNavigator = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName={RoutesEnum.NewPassword}
+        initialRouteName={RoutesEnum.OtpPhone}
         screenOptions={{
           headerShown: false,
         }}>
@@ -66,6 +69,7 @@ const StackNavigator = () => {
           name={RoutesEnum.NewPassword}
           component={NewPasswordScreen}
         />
+        <Stack.Screen name={RoutesEnum.OtpPhone} component={OtpPhoneScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

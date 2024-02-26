@@ -7,6 +7,7 @@ import {useRootState} from '../../context/RootContext';
 import PrimaryButton from '../../components/PrimaryButton/PrimaryButton';
 import {content} from './PasswordReset.content';
 import {RoutesEnum} from '../../navigators/StackNavigator';
+import VariantInpuTextField from '../../components/VariantInpuTextField/VariantInpuTextField';
 
 const PasswordResetScreen = () => {
   const [email, setEmail] = useState<string>('');
@@ -31,21 +32,9 @@ const PasswordResetScreen = () => {
             ]}>
             {content.fields.email}
           </Text>
-          <TextInput
-            value={email}
-            onChangeText={setEmail}
-            style={[
-              styles.input,
-              {
-                borderColor: colors[theme].secondary.gray,
-                color: colors[theme].secondary.gray,
-              },
-            ]}
-          />
+          <VariantInpuTextField text={email} onChangeText={setEmail} />
         </View>
-        <View style={styles.sendInstructionsContainer}>
-          <PrimaryButton onPress={() => {}} title={content.sendStructions} />
-        </View>
+        <PrimaryButton onPress={() => {}} title={content.sendStructions} />
       </ScrollView>
     </Template>
   );
@@ -73,20 +62,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontFamily: 'Arboria-Book',
     marginLeft: 18,
-  },
-  input: {
-    width: '100%',
-    borderWidth: 1,
-    borderRadius: 50,
-    paddingTop: 14,
-    paddingBottom: 14,
-    paddingLeft: 20,
-    paddingRight: 20,
-    fontSize: 20,
-    marginTop: 12,
-  },
-  sendInstructionsContainer: {
-    marginTop: 12,
+    marginBottom: 12,
   },
 });
 

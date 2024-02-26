@@ -3,88 +3,98 @@ import {
   Image,
   ScrollView,
   StyleSheet,
+  Text,
   TouchableOpacity,
   View,
 } from 'react-native';
 import Template from '../../components/Template/Template';
 import {content} from './SignUp.content';
 import TopHeader from '../../components/TopHeader/TopHeader';
-import {launchImageLibrary} from 'react-native-image-picker';
+// import {launchImageLibrary} from 'react-native-image-picker';
 import InputTextField from '../../components/InputTextField/InputTextField';
 import PrimaryButton from '../../components/PrimaryButton/PrimaryButton';
 import TermsAndConditions from '../../components/TermsAndConditions/TermsAndConditions';
 import {RoutesEnum} from '../../navigators/StackNavigator';
+import {colors} from '../../utils/colors';
+import {useRootState} from '../../context/RootContext';
 
 const SignUpScreen = ({navigation}: any) => {
-  const [image, setImage] = useState<string | undefined>();
+  // const [image, setImage] = useState<string | undefined>();
+  const {theme} = useRootState();
   const [name, setName] = useState<string>('');
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
   const [confirmPassword, setConfirmPassword] = useState<string>('');
-  const defaultImageUploader = require('../../assets/img/default-image-uploader.png');
+  // const defaultImageUploader = require('../../assets/img/default-image-uploader.png');
 
-  const pickImage = React.useCallback(async () => {
-    const upload = await launchImageLibrary({
-      mediaType: 'photo',
-      maxWidth: 300,
-      maxHeight: 300,
-    });
+  // const pickImage = React.useCallback(async () => {
+  //   const upload = await launchImageLibrary({
+  //     mediaType: 'photo',
+  //     maxWidth: 300,
+  //     maxHeight: 300,
+  //   });
 
-    if (upload.didCancel) {
-      console.log('User cancelled image picker');
-    } else if (upload.errorCode) {
-      console.log('Image picker error: ', upload.errorCode);
-    } else {
-      let imageUri = upload.assets?.[0]?.uri;
-      setImage(imageUri);
-    }
-  }, []);
+  //   if (upload.didCancel) {
+  //     console.log('User cancelled image picker');
+  //   } else if (upload.errorCode) {
+  //     console.log('Image picker error: ', upload.errorCode);
+  //   } else {
+  //     let imageUri = upload.assets?.[0]?.uri;
+  //     setImage(imageUri);
+  //   }
+  // }, []);
 
   return (
     <Template testID={content.testID}>
       <TopHeader />
-      <ScrollView>
-        <View style={styles.container}>
-          <TouchableOpacity style={styles.buttonImage} onPress={pickImage}>
+      <ScrollView contentContainerStyle={styles.container}>
+        <View>
+          <Text
+            style={[styles.textTitle, {color: colors[theme].tertiary.default}]}>
+            {content.title}
+          </Text>
+          <Text
+            style={[styles.longText, {color: colors[theme].secondary.gray}]}>
+            {content.text}
+          </Text>
+          <View style={styles.formContainer}>
+            {/* <TouchableOpacity style={styles.buttonImage} onPress={pickImage}>
             {!image && (
               <Image style={styles.image} source={defaultImageUploader} />
             )}
             {image && <Image style={styles.image} source={{uri: image}} />}
-          </TouchableOpacity>
-          <InputTextField
-            text={name}
-            onChangeText={setName}
-            placeholder={content.fields.name}
-          />
-          <InputTextField
-            text={email}
-            onChangeText={setEmail}
-            placeholder={content.fields.email}
-          />
-          <InputTextField
-            text={password}
-            onChangeText={setPassword}
-            placeholder={content.fields.password}
-            password
-          />
-          <InputTextField
-            text={confirmPassword}
-            onChangeText={setConfirmPassword}
-            placeholder={content.fields.confirmPassword}
-            password
-          />
-          <View style={styles.termsAndConditionsContainer}>
-            <TermsAndConditions navigation={navigation} />
-          </View>
-          <View style={styles.nextButtonContainer}>
-            <PrimaryButton
-              onPress={() =>
-                navigation.navigate(RoutesEnum.SignUpProfileSelection)
-              }
-              title={content.buttonText}
+          </TouchableOpacity> */}
+            <InputTextField
+              text={name}
+              onChangeText={setName}
+              placeholder={content.fields.name}
             />
+            <InputTextField
+              text={email}
+              onChangeText={setEmail}
+              placeholder={content.fields.email}
+            />
+            <InputTextField
+              text={password}
+              onChangeText={setPassword}
+              placeholder={content.fields.password}
+              password
+            />
+            <InputTextField
+              text={confirmPassword}
+              onChangeText={setConfirmPassword}
+              placeholder={content.fields.confirmPassword}
+              password
+            />
+            <View style={styles.termsAndConditionsContainer}>
+              <TermsAndConditions navigation={navigation} />
+            </View>
           </View>
         </View>
+        <PrimaryButton
+          onPress={() => navigation.navigate(RoutesEnum.SignUpProfileSelection)}
+          title={content.buttonText}
+        />
       </ScrollView>
     </Template>
   );
@@ -93,10 +103,11 @@ const SignUpScreen = ({navigation}: any) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    gap: 12,
-    paddingLeft: 50,
-    paddingRight: 50,
+    marginTop: 130,
+    paddingLeft: 46,
+    paddingRight: 46,
+    paddingBottom: 104,
+    justifyContent: 'space-between',
   },
   buttonImage: {
     width: 230,
@@ -115,6 +126,20 @@ const styles = StyleSheet.create({
   },
   termsAndConditionsContainer: {
     marginTop: 6,
+  },
+  textTitle: {
+    fontSize: 24,
+    fontFamily: 'Arboria-Bold',
+  },
+  longText: {
+    marginTop: 10,
+    fontSize: 14,
+    fontFamily: 'Arboria-Book',
+  },
+  formContainer: {
+    marginTop: 24,
+    gap: 12,
+    alignItems: 'center',
   },
 });
 

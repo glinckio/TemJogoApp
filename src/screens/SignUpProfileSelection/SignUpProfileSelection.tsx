@@ -1,20 +1,37 @@
-import React from 'react';
-import {
-  Image,
-  ScrollView,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-} from 'react-native';
+import React, {useRef, useState} from 'react';
+import {Animated, ScrollView, StyleSheet, Text, View} from 'react-native';
 import TopHeader from '../../components/TopHeader/TopHeader';
 import {useRootState} from '../../context/RootContext';
 import Template from '../../components/Template/Template';
 import {colors} from '../../utils/colors';
 import {content} from './SignUpProfileSelection.content';
+import ProfileSelection from './components/ProfileSelection/ProfileSelection';
 
 const SignUpProfileSelectionScreen = () => {
   const {theme} = useRootState();
+
+  const courtRef = useRef(new Animated.Value(0));
+  const [courtClicked, setCourtClicked] = useState(false);
+  const courtImage = require('../../assets/img/court.png');
+  const coloredCourtImage = require('../../assets/img/colored-court.png');
+
+  const playerRef = useRef(new Animated.Value(0));
+  const [playerClicked, setPlayerClicked] = useState(false);
+  const playerImage = require('../../assets/img/player.png');
+  const coloredPlayerImage = require('../../assets/img/colored-player.png');
+
+  const fadeIn = ref => {
+    // Will change fadeAnim value to 1 in 5 seconds
+    Animated.timing(ref, {
+      toValue: 1,
+      duration: 500,
+      useNativeDriver: true,
+    }).start();
+
+    setTimeout(() => {
+      // move to another screen
+    }, 500);
+  };
 
   return (
     <Template testID={content.testID}>
@@ -28,18 +45,28 @@ const SignUpProfileSelectionScreen = () => {
             {content.willBe}
           </Text>
         </View>
-        <TouchableOpacity>
-          <Image
-            style={styles.image}
-            source={require('../../assets/img/court.png')}
-          />
-        </TouchableOpacity>
-        <TouchableOpacity>
-          <Image
-            style={styles.image}
-            source={require('../../assets/img/player.png')}
-          />
-        </TouchableOpacity>
+        <ProfileSelection
+          onPress={() => {
+            setCourtClicked(true);
+            fadeIn(courtRef.current);
+          }}
+          isClicked={courtClicked}
+          coloredImage={coloredCourtImage}
+          image={courtImage}
+          ref={courtRef}
+          label={content.courtLabel}
+        />
+        <ProfileSelection
+          onPress={() => {
+            setPlayerClicked(true);
+            fadeIn(playerRef.current);
+          }}
+          isClicked={playerClicked}
+          coloredImage={coloredPlayerImage}
+          image={playerImage}
+          ref={playerRef}
+          label={content.playerLabel}
+        />
       </ScrollView>
     </Template>
   );
@@ -57,10 +84,6 @@ const styles = StyleSheet.create({
     fontFamily: 'MonumentExtended-Ultrabold',
     fontSize: 24,
     textAlign: 'center',
-  },
-  image: {
-    width: 230,
-    height: 230,
   },
 });
 

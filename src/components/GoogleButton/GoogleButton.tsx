@@ -4,9 +4,16 @@ import {Image, StyleSheet, Text, TouchableOpacity} from 'react-native';
 import {content} from './GoogleButton.content';
 import {colors} from '../../utils/colors';
 
-const GoogleButton = () => {
+type GoogleButtonTypes = {
+  onPress: () => void;
+};
+
+const GoogleButton = ({onPress}: GoogleButtonTypes) => {
   return (
-    <TouchableOpacity testID={content.testID} style={styles.button}>
+    <TouchableOpacity
+      onPress={onPress}
+      testID={content.testID}
+      style={styles.button}>
       <Image
         style={styles.icon}
         source={require('../../assets/icons/google.png')}

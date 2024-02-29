@@ -46,7 +46,7 @@ const StackNavigator = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName={RoutesEnum.SignUpProfileSelection}
+        initialRouteName={RoutesEnum.Login}
         screenOptions={{
           headerShown: false,
         }}>

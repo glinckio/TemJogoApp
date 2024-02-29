@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
     marginTop: 130,
     paddingLeft: 46,
     paddingRight: 46,
-    paddingBottom: 104,
+    paddingBottom: 60,
     justifyContent: 'space-between',
   },
   textTitle: {

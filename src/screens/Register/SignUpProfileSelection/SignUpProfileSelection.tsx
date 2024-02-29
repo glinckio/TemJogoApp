@@ -12,13 +12,13 @@ const SignUpProfileSelectionScreen = () => {
 
   const courtRef = useRef(new Animated.Value(0));
   const [courtClicked, setCourtClicked] = useState(false);
-  const courtImage = require('../../assets/img/court.png');
-  const coloredCourtImage = require('../../assets/img/colored-court.png');
+  const courtImage = require('../../../assets/img/court.png');
+  const coloredCourtImage = require('../../../assets/img/colored-court.png');
 
   const playerRef = useRef(new Animated.Value(0));
   const [playerClicked, setPlayerClicked] = useState(false);
-  const playerImage = require('../../assets/img/player.png');
-  const coloredPlayerImage = require('../../assets/img/colored-player.png');
+  const playerImage = require('../../../assets/img/player.png');
+  const coloredPlayerImage = require('../../../assets/img/colored-player.png');
 
   const fadeIn = ref => {
     // Will change fadeAnim value to 1 in 5 seconds

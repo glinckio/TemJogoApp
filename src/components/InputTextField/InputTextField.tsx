@@ -16,6 +16,7 @@ type InputTextFieldType = {
   placeholder?: string;
   text: string;
   password?: boolean;
+  style?: any;
   onChangeText: (str: string) => void;
 };
 
@@ -25,6 +26,7 @@ const InputTextField = ({
   text,
   onChangeText,
   password,
+  style,
 }: InputTextFieldType) => {
   const [hide, setHide] = useState(true);
   const {theme} = useRootState();
@@ -32,7 +34,7 @@ const InputTextField = ({
   const showIcon = require('../../assets/icons/fi-rr-eye.png');
 
   return (
-    <View testID={content.testID} style={styles.container}>
+    <View testID={content.testID} style={[styles.container, style]}>
       {icon && <View style={styles.icon}>{icon}</View>}
       <TextInput
         style={[styles.input, {color: colors.dark.tertiary.default}]}

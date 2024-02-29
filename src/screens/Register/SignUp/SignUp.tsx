@@ -1,12 +1,5 @@
 import React, {useState} from 'react';
-import {
-  Image,
-  ScrollView,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-} from 'react-native';
+import {ScrollView, StyleSheet, Text, View} from 'react-native';
 import Template from '../../../components/Template/Template';
 import {content} from './SignUp.content';
 import TopHeader from '../../../components/TopHeader/TopHeader';
@@ -25,24 +18,6 @@ const SignUpScreen = ({navigation}: any) => {
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
   const [confirmPassword, setConfirmPassword] = useState<string>('');
-  // const defaultImageUploader = require('../../assets/img/default-image-uploader.png');
-
-  // const pickImage = React.useCallback(async () => {
-  //   const upload = await launchImageLibrary({
-  //     mediaType: 'photo',
-  //     maxWidth: 300,
-  //     maxHeight: 300,
-  //   });
-
-  //   if (upload.didCancel) {
-  //     console.log('User cancelled image picker');
-  //   } else if (upload.errorCode) {
-  //     console.log('Image picker error: ', upload.errorCode);
-  //   } else {
-  //     let imageUri = upload.assets?.[0]?.uri;
-  //     setImage(imageUri);
-  //   }
-  // }, []);
 
   return (
     <Template testID={content.testID}>
@@ -58,12 +33,6 @@ const SignUpScreen = ({navigation}: any) => {
             {content.text}
           </Text>
           <View style={styles.formContainer}>
-            {/* <TouchableOpacity style={styles.buttonImage} onPress={pickImage}>
-            {!image && (
-              <Image style={styles.image} source={defaultImageUploader} />
-            )}
-            {image && <Image style={styles.image} source={{uri: image}} />}
-          </TouchableOpacity> */}
             <InputTextField
               text={name}
               onChangeText={setName}
@@ -106,7 +75,7 @@ const styles = StyleSheet.create({
     marginTop: 130,
     paddingLeft: 46,
     paddingRight: 46,
-    paddingBottom: 104,
+    paddingBottom: 60,
     justifyContent: 'space-between',
   },
   buttonImage: {

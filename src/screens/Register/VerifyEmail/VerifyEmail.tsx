@@ -15,7 +15,7 @@ const VerifyEmailScreen = ({navigation}: any) => {
         <View style={styles.emailContainer}>
           <Image
             style={styles.img}
-            source={require('../../assets/img/email-template.png')}
+            source={require('../../../assets/img/email-template.png')}
           />
           <Text style={[styles.title, {color: colors[theme].tertiary.default}]}>
             {content.title}

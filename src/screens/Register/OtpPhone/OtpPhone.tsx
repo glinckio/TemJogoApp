@@ -1,18 +1,19 @@
-import React from 'react';
-import Template from '../../components/Template/Template';
-import TopHeader from '../../components/TopHeader/TopHeader';
+import React, {useState} from 'react';
+import Template from '../../../components/Template/Template';
+import TopHeader from '../../../components/TopHeader/TopHeader';
 import {ScrollView, StyleSheet, Text, View} from 'react-native';
-import {colors} from '../../utils/colors';
-import {useRootState} from '../../context/RootContext';
-import {content} from './OtpVerification.content';
-import PrimaryButton from '../../components/PrimaryButton/PrimaryButton';
-import OtpForm from '../../components/OtpForm/OtpForm';
+import {colors} from '../../../utils/colors';
+import {useRootState} from '../../../context/RootContext';
+import {content} from './OtpPhone.content';
+import VariantInpuTextField from '../../../components/VariantInpuTextField/VariantInpuTextField';
+import PrimaryButton from '../../../components/PrimaryButton/PrimaryButton';
 
-const OtpVerificationScreen = () => {
+const OtpPhoneScreen = () => {
   const {theme} = useRootState();
+  const [phone, setPhone] = useState('');
 
   return (
-    <Template testID={content.testID}>
+    <Template>
       <TopHeader />
       <ScrollView contentContainerStyle={styles.container}>
         <View>
@@ -25,17 +26,11 @@ const OtpVerificationScreen = () => {
             {content.text}
           </Text>
           <View style={styles.inputContainer}>
-            <OtpForm />
-            <Text
-              style={[
-                styles.dontReceiveCodetext,
-                {color: colors[theme].tertiary.default},
-              ]}>
-              {content.dontReceiveCode}{' '}
-              <Text style={[styles.hightLightText, {}]}>
-                {content.resendCode}
-              </Text>
-            </Text>
+            <VariantInpuTextField
+              placeholder={content.fields.phone}
+              onChangeText={setPhone}
+              text={phone}
+            />
           </View>
         </View>
         <PrimaryButton onPress={() => {}} title={content.buttonText} />
@@ -84,13 +79,6 @@ const styles = StyleSheet.create({
   sendInstructionsContainer: {
     marginTop: 12,
   },
-  dontReceiveCodetext: {
-    marginTop: 14,
-    fontFamily: 'Arboria-Book',
-  },
-  hightLightText: {
-    color: colors.dark.primary.default,
-  },
 });
 
-export default OtpVerificationScreen;
+export default OtpPhoneScreen;

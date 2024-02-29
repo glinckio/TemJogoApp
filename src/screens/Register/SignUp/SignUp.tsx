@@ -7,16 +7,16 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import Template from '../../components/Template/Template';
+import Template from '../../../components/Template/Template';
 import {content} from './SignUp.content';
-import TopHeader from '../../components/TopHeader/TopHeader';
+import TopHeader from '../../../components/TopHeader/TopHeader';
 // import {launchImageLibrary} from 'react-native-image-picker';
-import InputTextField from '../../components/InputTextField/InputTextField';
-import PrimaryButton from '../../components/PrimaryButton/PrimaryButton';
-import TermsAndConditions from '../../components/TermsAndConditions/TermsAndConditions';
-import {RoutesEnum} from '../../navigators/StackNavigator';
-import {colors} from '../../utils/colors';
-import {useRootState} from '../../context/RootContext';
+import InputTextField from '../../../components/InputTextField/InputTextField';
+import PrimaryButton from '../../../components/PrimaryButton/PrimaryButton';
+import TermsAndConditions from '../../../components/TermsAndConditions/TermsAndConditions';
+import {RoutesEnum} from '../../../navigators/StackNavigator';
+import {colors} from '../../../utils/colors';
+import {useRootState} from '../../../context/RootContext';
 
 const SignUpScreen = ({navigation}: any) => {
   // const [image, setImage] = useState<string | undefined>();

@@ -1,6 +1,6 @@
 import React from 'react';
-import TopHeader from '../../components/TopHeader/TopHeader';
-import Template from '../../components/Template/Template';
+import TopHeader from '../../../components/TopHeader/TopHeader';
+import Template from '../../../components/Template/Template';
 import {ScrollView, StyleSheet, Text, View} from 'react-native';
 import {content} from './TermsAndConditions.content';
 

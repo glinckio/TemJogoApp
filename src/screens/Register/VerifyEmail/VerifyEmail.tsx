@@ -1,10 +1,10 @@
 import React from 'react';
 import {Image, ScrollView, StyleSheet, Text, View} from 'react-native';
-import Template from '../../components/Template/Template';
+import Template from '../../../components/Template/Template';
 import {content} from './VerifyEmail.content';
-import {colors} from '../../utils/colors';
-import {useRootState} from '../../context/RootContext';
-import {RoutesEnum} from '../../navigators/StackNavigator';
+import {colors} from '../../../utils/colors';
+import {useRootState} from '../../../context/RootContext';
+import {RoutesEnum} from '../../../navigators/StackNavigator';
 
 const VerifyEmailScreen = ({navigation}: any) => {
   const {theme} = useRootState();

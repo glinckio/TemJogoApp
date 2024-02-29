@@ -1,9 +1,9 @@
 import React, {useRef, useState} from 'react';
 import {Animated, ScrollView, StyleSheet, Text, View} from 'react-native';
-import TopHeader from '../../components/TopHeader/TopHeader';
-import {useRootState} from '../../context/RootContext';
-import Template from '../../components/Template/Template';
-import {colors} from '../../utils/colors';
+import TopHeader from '../../../components/TopHeader/TopHeader';
+import {useRootState} from '../../../context/RootContext';
+import Template from '../../../components/Template/Template';
+import {colors} from '../../../utils/colors';
 import {content} from './SignUpProfileSelection.content';
 import ProfileSelection from './components/ProfileSelection/ProfileSelection';
 

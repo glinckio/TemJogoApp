@@ -5,14 +5,14 @@ import {
   createNativeStackNavigator,
 } from '@react-navigation/native-stack';
 import LoginScreen from '../screens/Login/Login';
-import SignUpProfileSelectionScreen from '../screens/SignUpProfileSelection/SignUpProfileSelection';
-import SignUpScreen from '../screens/SignUp/SignUp';
-import TermsAndConditionsScreen from '../screens/TermsAndConditions/TermsAndConditions';
+import SignUpProfileSelectionScreen from '../screens/Register/SignUpProfileSelection/SignUpProfileSelection';
+import SignUpScreen from '../screens/Register/SignUp/SignUp';
+import TermsAndConditionsScreen from '../screens/Register/TermsAndConditions/TermsAndConditions';
 import PasswordResetScreen from '../screens/PasswordReset/PasswordReset';
-import VerifyEmailScreen from '../screens/VerifyEmail/VerifyEmail';
+import VerifyEmailScreen from '../screens/Register/VerifyEmail/VerifyEmail';
 import NewPasswordScreen from '../screens/NewPassword/NewPassword';
-import OtpPhoneScreen from '../screens/OtpPhone/OtpPhone';
-import OtpVerificationScreen from '../screens/OtpVerification/OtpVerification';
+import OtpPhoneScreen from '../screens/Register/OtpPhone/OtpPhone';
+import OtpVerificationScreen from '../screens/Register/OtpVerification/OtpVerification';
 
 export enum RoutesEnum {
   Login = 'Login',

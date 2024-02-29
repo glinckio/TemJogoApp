@@ -9,7 +9,7 @@ import {
   View,
 } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
-import {colors} from '../../../../utils/colors';
+import {colors} from '../../../../../utils/colors';
 
 type ProfileSelectionProps = {
   onPress: () => void;

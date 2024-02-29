@@ -16,6 +16,7 @@ import Template from '../../components/Template/Template';
 import {RoutesEnum} from '../../navigators/StackNavigator';
 import GoogleButton from '../../components/GoogleButton/GoogleButton';
 import {GoogleSignin} from '@react-native-google-signin/google-signin';
+import {FIREBASE_IOS_CLIENT_ID, FIREBASE_WEB_CLIENT_ID} from '@env';
 
 const LoginScreen = ({navigation}: any) => {
   const [name, setName] = useState('');
@@ -24,12 +25,10 @@ const LoginScreen = ({navigation}: any) => {
 
   useEffect(() => {
     GoogleSignin.configure({
-      scopes: ['email'], // qual API você quer acessar em nome do usuário; o padrão é o email e o perfil
-      iosClientId:
-        '153269817516-ai6dng9du1l6ltsmoqhkiv3dqi098no6.apps.googleusercontent.com',
-      webClientId:
-        '153269817516-r34tahmnosrm4pk063bmqcdti2rt712h.apps.googleusercontent.com', // o ID do client do tipo WEB para seu servidor (necessário para verificar o ID do usuário e o acesso off-line)
-      offlineAccess: true, // se você deseja acessar a API do Google API em nome do usuário DE SEU SERVIDOR
+      scopes: ['email'],
+      iosClientId: FIREBASE_IOS_CLIENT_ID,
+      webClientId: FIREBASE_WEB_CLIENT_ID,
+      offlineAccess: true,
     });
   }, []);
 

@@ -15,6 +15,7 @@ import OtpPhoneScreen from '../screens/Register/OtpPhone/OtpPhone';
 import OtpVerificationScreen from '../screens/Register/OtpVerification/OtpVerification';
 import CourtInformationScreen from '../screens/Register/CourtInformation/CourtInformation';
 import PlayerInformationScreen from '../screens/Register/PlayerInformation/PlayerInformation';
+import CourtScheduleScreen from '../screens/Register/CourtSchedule/CourtSchedule';
 
 export enum RoutesEnum {
   Login = 'Login',
@@ -28,6 +29,7 @@ export enum RoutesEnum {
   OtpVerification = 'OtpVerification',
   CourtInformation = 'CourtInformation',
   PlayerInformation = 'PlayerInformation',
+  CourtSchedule = 'CourtSchedule',
 }
 
 export type RootStackParamList = {
@@ -42,6 +44,7 @@ export type RootStackParamList = {
   OtpVerification: undefined;
   CourtInformation: undefined;
   PlayerInformation: undefined;
+  CourtSchedule: undefined;
 };
 
 export const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -52,7 +55,7 @@ const StackNavigator = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName={RoutesEnum.PlayerInformation}
+        initialRouteName={RoutesEnum.CourtSchedule}
         screenOptions={{
           headerShown: false,
         }}>
@@ -90,6 +93,10 @@ const StackNavigator = () => {
         <Stack.Screen
           name={RoutesEnum.PlayerInformation}
           component={PlayerInformationScreen}
+        />
+        <Stack.Screen
+          name={RoutesEnum.CourtSchedule}
+          component={CourtScheduleScreen}
         />
       </Stack.Navigator>
     </NavigationContainer>

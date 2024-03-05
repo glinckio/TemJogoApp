@@ -1,5 +1,5 @@
-import React, {useRef, useState} from 'react';
-import {Animated, ScrollView, StyleSheet, Text, View} from 'react-native';
+import React, {useState} from 'react';
+import {ScrollView, StyleSheet, Text, View} from 'react-native';
 import TopHeader from '../../../components/TopHeader/TopHeader';
 import {useRootState} from '../../../context/RootContext';
 import Template from '../../../components/Template/Template';
@@ -9,7 +9,7 @@ import ProfileSelection from './components/ProfileSelection/ProfileSelection';
 
 const SignUpProfileSelectionScreen = () => {
   const {theme} = useRootState();
-  const [selectedProfiles, setSelectedProfiles] = useState<any[]>([]);
+  // const [selectedProfiles, setSelectedProfiles] = useState<any[]>([]);
 
   const courtImage = require('../../../assets/img/court.png');
   const coloredCourtImage = require('../../../assets/img/colored-court.png');
@@ -17,7 +17,7 @@ const SignUpProfileSelectionScreen = () => {
   const playerImage = require('../../../assets/img/player.png');
   const coloredPlayerImage = require('../../../assets/img/colored-player.png');
 
-  const handlePressProfile = (profile: any) => {};
+  const handlePressProfile = () => {};
 
   return (
     <Template testID={content.testID}>

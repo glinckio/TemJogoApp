@@ -1,7 +1,7 @@
-import React, {useRef, useState} from 'react';
+import React from 'react';
 import Template from '../../../components/Template/Template';
 import TopHeader from '../../../components/TopHeader/TopHeader';
-import {Animated, ScrollView, StyleSheet, Text, View} from 'react-native';
+import {ScrollView, StyleSheet, Text, View} from 'react-native';
 import PrimaryButton from '../../../components/PrimaryButton/PrimaryButton';
 import {content} from './CourtSelection.content';
 import {colors} from '../../../utils/colors';
@@ -20,7 +20,7 @@ const CourtSelectionScreen = () => {
   const anotherCourtImage = require('../../../assets/img/anotherCourts.png');
   const coloredAnotherCourtImage = require('../../../assets/img/coloredAnotherCourts.png');
 
-  const handlePressCourt = (court: any) => {};
+  const handlePressCourt = () => {};
 
   return (
     <Template testID={content.testID}>

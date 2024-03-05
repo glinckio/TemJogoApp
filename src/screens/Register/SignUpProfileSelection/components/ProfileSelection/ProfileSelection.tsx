@@ -1,4 +1,4 @@
-import React, {forwardRef} from 'react';
+import React, {forwardRef, useRef, useState} from 'react';
 import {
   Animated,
   Image,
@@ -12,42 +12,86 @@ import LinearGradient from 'react-native-linear-gradient';
 import {colors} from '../../../../../utils/colors';
 
 type ProfileSelectionProps = {
-  onPress: () => void;
-  isClicked: boolean;
+  onPress?: (params?: unknown) => void;
   coloredImage: ImageSourcePropType;
   image: ImageSourcePropType;
   label: string;
 };
+//   (props: ProfileSelectionProps, ref: any) => {
+//     const {onPress, isClicked, coloredImage, image, label} = props;
 
-const ProfileSelection = forwardRef(
-  (props: ProfileSelectionProps, ref: any) => {
-    const {onPress, isClicked, coloredImage, image, label} = props;
+//     return (
+//       <TouchableOpacity onPress={onPress} style={styles.container}>
+//         <Image style={styles.image} source={isClicked ? coloredImage : image} />
+//         <View style={styles.squareContainer}>
+//           <Text style={styles.label}>{label}</Text>
+//         </View>
+//         <Animated.View
+//           style={[
+//             styles.animatedContainer,
+//             {
+//               opacity: ref,
+//             },
+//           ]}>
+//           <LinearGradient
+//             style={styles.gradientContainer}
+//             colors={['rgba(0, 0, 0, 0)', colors.dark.primary.default]}>
+//             <View style={styles.gradientLabel}>
+//               <Text style={styles.label}>{label}</Text>
+//             </View>
+//           </LinearGradient>
+//         </Animated.View>
+//       </TouchableOpacity>
+//     );
+//   },
+// );
 
-    return (
-      <TouchableOpacity onPress={onPress} style={styles.container}>
-        <Image style={styles.image} source={isClicked ? coloredImage : image} />
-        <View style={styles.squareContainer}>
-          <Text style={styles.label}>{label}</Text>
-        </View>
-        <Animated.View
-          style={[
-            styles.animatedContainer,
-            {
-              opacity: ref,
-            },
-          ]}>
-          <LinearGradient
-            style={styles.gradientContainer}
-            colors={['rgba(0, 0, 0, 0)', colors.dark.primary.default]}>
-            <View style={styles.gradientLabel}>
-              <Text style={styles.label}>{label}</Text>
-            </View>
-          </LinearGradient>
-        </Animated.View>
-      </TouchableOpacity>
-    );
-  },
-);
+const ProfileSelection = ({
+  onPress,
+  coloredImage,
+  image,
+  label,
+}: ProfileSelectionProps) => {
+  const ref = useRef(new Animated.Value(0));
+  const [isClicked, setIsClicked] = useState(false);
+
+  const fadeIn = () => {
+    Animated.timing(ref.current, {
+      toValue: 1,
+      duration: 500,
+      useNativeDriver: true,
+    }).start();
+
+    setIsClicked(!isClicked);
+    if (onPress) {
+      onPress();
+    }
+  };
+
+  return (
+    <TouchableOpacity onPress={fadeIn} style={styles.container}>
+      <Image style={styles.image} source={isClicked ? coloredImage : image} />
+      <View style={styles.squareContainer}>
+        <Text style={styles.label}>{label}</Text>
+      </View>
+      <Animated.View
+        style={[
+          styles.animatedContainer,
+          {
+            opacity: ref,
+          },
+        ]}>
+        <LinearGradient
+          style={styles.gradientContainer}
+          colors={['rgba(0, 0, 0, 0)', colors.dark.primary.default]}>
+          <View style={styles.gradientLabel}>
+            <Text style={styles.label}>{label}</Text>
+          </View>
+        </LinearGradient>
+      </Animated.View>
+    </TouchableOpacity>
+  );
+};
 
 const styles = StyleSheet.create({
   container: {

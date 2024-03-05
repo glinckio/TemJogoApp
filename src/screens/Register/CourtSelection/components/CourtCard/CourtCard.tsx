@@ -1,4 +1,4 @@
-import React, {forwardRef} from 'react';
+import React, {forwardRef, useRef, useState} from 'react';
 import {
   Animated,
   Image,
@@ -12,18 +12,31 @@ import LinearGradient from 'react-native-linear-gradient';
 import {colors} from '../../../../../utils/colors';
 
 type CourtCardProps = {
-  onPress: () => void;
-  isClicked: boolean;
+  onPress: (params?: unknown) => void;
   coloredImage: ImageSourcePropType;
   image: ImageSourcePropType;
   label: string;
 };
 
-const CourtCard = forwardRef((props: CourtCardProps, ref: any) => {
-  const {onPress, isClicked, coloredImage, image, label} = props;
+const CourtCard = ({onPress, coloredImage, image, label}: CourtCardProps) => {
+  const ref = useRef(new Animated.Value(0));
+  const [isClicked, setIsClicked] = useState(false);
+
+  const fadeIn = () => {
+    Animated.timing(ref.current, {
+      toValue: 1,
+      duration: 500,
+      useNativeDriver: true,
+    }).start();
+
+    setIsClicked(!isClicked);
+    if (onPress) {
+      onPress();
+    }
+  };
 
   return (
-    <TouchableOpacity onPress={onPress} style={styles.container}>
+    <TouchableOpacity onPress={fadeIn} style={styles.container}>
       <Image style={styles.image} source={isClicked ? coloredImage : image} />
       <View style={styles.squareContainer}>
         <Text style={styles.label}>{label}</Text>
@@ -45,7 +58,7 @@ const CourtCard = forwardRef((props: CourtCardProps, ref: any) => {
       </Animated.View>
     </TouchableOpacity>
   );
-});
+};
 
 const styles = StyleSheet.create({
   container: {

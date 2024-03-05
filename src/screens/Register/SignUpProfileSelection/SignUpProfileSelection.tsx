@@ -9,29 +9,15 @@ import ProfileSelection from './components/ProfileSelection/ProfileSelection';
 
 const SignUpProfileSelectionScreen = () => {
   const {theme} = useRootState();
+  const [selectedProfiles, setSelectedProfiles] = useState<any[]>([]);
 
-  const courtRef = useRef(new Animated.Value(0));
-  const [courtClicked, setCourtClicked] = useState(false);
   const courtImage = require('../../../assets/img/court.png');
   const coloredCourtImage = require('../../../assets/img/colored-court.png');
 
-  const playerRef = useRef(new Animated.Value(0));
-  const [playerClicked, setPlayerClicked] = useState(false);
   const playerImage = require('../../../assets/img/player.png');
   const coloredPlayerImage = require('../../../assets/img/colored-player.png');
 
-  const fadeIn = ref => {
-    // Will change fadeAnim value to 1 in 5 seconds
-    Animated.timing(ref, {
-      toValue: 1,
-      duration: 500,
-      useNativeDriver: true,
-    }).start();
-
-    setTimeout(() => {
-      // move to another screen
-    }, 500);
-  };
+  const handlePressProfile = (profile: any) => {};
 
   return (
     <Template testID={content.testID}>
@@ -46,25 +32,15 @@ const SignUpProfileSelectionScreen = () => {
           </Text>
         </View>
         <ProfileSelection
-          onPress={() => {
-            setCourtClicked(true);
-            fadeIn(courtRef.current);
-          }}
-          isClicked={courtClicked}
+          onPress={handlePressProfile}
           coloredImage={coloredCourtImage}
           image={courtImage}
-          ref={courtRef}
           label={content.courtLabel}
         />
         <ProfileSelection
-          onPress={() => {
-            setPlayerClicked(true);
-            fadeIn(playerRef.current);
-          }}
-          isClicked={playerClicked}
+          onPress={handlePressProfile}
           coloredImage={coloredPlayerImage}
           image={playerImage}
-          ref={playerRef}
           label={content.playerLabel}
         />
       </ScrollView>

@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {ScrollView, StyleSheet, Text, TextInput, View} from 'react-native';
+import {ScrollView, StyleSheet, Text, View} from 'react-native';
 import Template from '../../components/Template/Template';
 import TopHeader from '../../components/TopHeader/TopHeader';
 import {colors} from '../../utils/colors';

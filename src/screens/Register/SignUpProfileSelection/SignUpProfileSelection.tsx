@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {ScrollView, StyleSheet, Text, View} from 'react-native';
 import TopHeader from '../../../components/TopHeader/TopHeader';
 import {useRootState} from '../../../context/RootContext';

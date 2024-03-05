@@ -7,7 +7,7 @@ import {useRootState} from '../../context/RootContext';
 import PrimaryButton from '../../components/PrimaryButton/PrimaryButton';
 import {content} from './PasswordReset.content';
 import {RoutesEnum} from '../../navigators/StackNavigator';
-import VariantInpuTextField from '../../components/VariantInpuTextField/VariantInpuTextField';
+import VariantInputTextField from '../../components/VariantInputTextField/VariantInputTextField';
 
 const PasswordResetScreen = () => {
   const [email, setEmail] = useState<string>('');
@@ -32,7 +32,7 @@ const PasswordResetScreen = () => {
             ]}>
             {content.fields.email}
           </Text>
-          <VariantInpuTextField text={email} onChangeText={setEmail} />
+          <VariantInputTextField text={email} onChangeText={setEmail} />
         </View>
         <PrimaryButton onPress={() => {}} title={content.sendStructions} />
       </ScrollView>

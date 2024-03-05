@@ -5,7 +5,7 @@ import {ScrollView, StyleSheet, Text, View} from 'react-native';
 import {colors} from '../../../utils/colors';
 import {useRootState} from '../../../context/RootContext';
 import {content} from './OtpPhone.content';
-import VariantInpuTextField from '../../../components/VariantInpuTextField/VariantInpuTextField';
+import VariantInputTextField from '../../../components/VariantInputTextField/VariantInputTextField';
 import PrimaryButton from '../../../components/PrimaryButton/PrimaryButton';
 
 const OtpPhoneScreen = () => {
@@ -26,7 +26,7 @@ const OtpPhoneScreen = () => {
             {content.text}
           </Text>
           <View style={styles.inputContainer}>
-            <VariantInpuTextField
+            <VariantInputTextField
               placeholder={content.fields.phone}
               onChangeText={setPhone}
               text={phone}

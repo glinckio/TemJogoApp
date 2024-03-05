@@ -35,7 +35,11 @@ const InputTextField = ({
 
   return (
     <View testID={content.testID} style={[styles.container, style]}>
-      {icon && <View style={styles.icon}>{icon}</View>}
+      {icon && (
+        <View style={styles.icon} testID={content.iconTestId}>
+          {icon}
+        </View>
+      )}
       <TextInput
         style={[styles.input, {color: colors.dark.tertiary.default}]}
         value={text}
@@ -45,7 +49,9 @@ const InputTextField = ({
         placeholderTextColor={colors[theme].secondary.light}
       />
       {password && (
-        <TouchableOpacity onPress={() => setHide(!hide)}>
+        <TouchableOpacity
+          onPress={() => setHide(!hide)}
+          testID={content.hideShowIconButton}>
           <Image
             style={styles.showHideIcon}
             source={hide ? hideIcon : showIcon}

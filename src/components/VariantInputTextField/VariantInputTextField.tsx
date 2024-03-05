@@ -8,12 +8,12 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import {content} from './VariantInpuTextField.content';
+import {content} from './VariantInputTextField.content';
 import {colors} from '../../utils/colors';
 import {useRootState} from '../../context/RootContext';
 import InfoMessage from '../InfoMessage/InfoMessage';
 
-type VariantInpuTextFieldType = {
+type VariantInputTextFieldType = {
   icon?: React.JSX.Element;
   label?: string;
   text: string;
@@ -24,7 +24,7 @@ type VariantInpuTextFieldType = {
   onChangeText: (str: string) => void;
 };
 
-const VariantInpuTextField = ({
+const VariantInputTextField = ({
   icon,
   label,
   text,
@@ -33,7 +33,7 @@ const VariantInpuTextField = ({
   info,
   error,
   placeholder,
-}: VariantInpuTextFieldType) => {
+}: VariantInputTextFieldType) => {
   const [hide, setHide] = useState(true);
   const {theme} = useRootState();
   const hideIcon = require('../../assets/icons/fi-rr-eye-closed.png');
@@ -51,7 +51,11 @@ const VariantInpuTextField = ({
           styles.container,
           {borderColor: colors[theme].tertiary.default},
         ]}>
-        {icon && <View style={styles.icon}>{icon}</View>}
+        {icon && (
+          <View style={styles.icon} testID={content.iconTestId}>
+            {icon}
+          </View>
+        )}
         <TextInput
           style={[styles.input, {color: colors[theme].tertiary.default}]}
           value={text}
@@ -61,7 +65,9 @@ const VariantInpuTextField = ({
           placeholderTextColor={colors[theme].secondary.light}
         />
         {password && (
-          <TouchableOpacity onPress={() => setHide(!hide)}>
+          <TouchableOpacity
+            onPress={() => setHide(!hide)}
+            testID={content.hideShowIconButton}>
             <Image
               style={styles.showHideIcon}
               source={hide ? hideIcon : showIcon}
@@ -107,4 +113,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default VariantInpuTextField;
+export default VariantInputTextField;

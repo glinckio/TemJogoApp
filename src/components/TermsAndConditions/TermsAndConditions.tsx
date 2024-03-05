@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
 import CheckBox from '@react-native-community/checkbox';
 import {content} from './TermsAndConditions.content';
 import {colors} from '../../utils/colors';
@@ -16,6 +16,7 @@ const TermsAndConditions = ({navigation}: any) => {
       <View style={styles.textContainer}>
         <Text style={styles.text}>{content.readAndAgree}</Text>
         <Text
+          testID="teste"
           style={styles.highlightText}
           onPress={() => navigation.navigate(RoutesEnum.TermsAndConditions)}>
           {content.termsAndConditions}

@@ -5,7 +5,7 @@ import {colors} from '../../utils/colors';
 import {useRootState} from '../../context/RootContext';
 import {content} from './NewPassword.content';
 import PrimaryButton from '../../components/PrimaryButton/PrimaryButton';
-import VariantInpuTextField from '../../components/VariantInpuTextField/VariantInpuTextField';
+import VariantInputTextField from '../../components/VariantInputTextField/VariantInputTextField';
 import TopHeader from '../../components/TopHeader/TopHeader';
 import {RoutesEnum} from '../../navigators/StackNavigator';
 
@@ -27,7 +27,7 @@ const NewPasswordScreen = () => {
             {content.longText}
           </Text>
           <View style={styles.fieldsContainer}>
-            <VariantInpuTextField
+            <VariantInputTextField
               text={password}
               onChangeText={setPassword}
               label={content.fields.password}
@@ -35,7 +35,7 @@ const NewPasswordScreen = () => {
               password
               error
             />
-            <VariantInpuTextField
+            <VariantInputTextField
               text={passwordConfirmation}
               onChangeText={setPasswordConfirmation}
               label={content.fields.confirmPassword}

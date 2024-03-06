@@ -1,0 +1,61 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/assets/fonts/Arboria/Arboria-Black.ttf",
+      "sha1": "0be2d347567264730763a35395939829da3b2553"
+    },
+    {
+      "path": "src/assets/fonts/Arboria/Arboria-BlackItalic.ttf",
+      "sha1": "ce80760e2bc550e6100df9381400c86ad10edebf"
+    },
+    {
+      "path": "src/assets/fonts/Arboria/Arboria-Bold.ttf",
+      "sha1": "4d28a029a552acf929840565c392cf2079274451"
+    },
+    {
+      "path": "src/assets/fonts/Arboria/Arboria-BoldItalic.ttf",
+      "sha1": "989f15f39688fd821e957752b9b8cb2dcfe7e679"
+    },
+    {
+      "path": "src/assets/fonts/Arboria/Arboria-Book.ttf",
+      "sha1": "fe0a64ff7624c85366d034973543216f659ae44e"
+    },
+    {
+      "path": "src/assets/fonts/Arboria/Arboria-BookItalic.ttf",
+      "sha1": "9e3e115f28f35bfdc858e5faf28873c89acb5599"
+    },
+    {
+      "path": "src/assets/fonts/Arboria/Arboria-Light.ttf",
+      "sha1": "ce0ec225d5a8b4f4b93f01a2dff145cf8aa6ecfa"
+    },
+    {
+      "path": "src/assets/fonts/Arboria/Arboria-LightItalic.ttf",
+      "sha1": "ac8f1ff00da124db6f265c0a9d0bfe11b677c4a5"
+    },
+    {
+      "path": "src/assets/fonts/Arboria/Arboria-Medium.ttf",
+      "sha1": "befd43af9658b0f716e271586ae25987e8a5aab1"
+    },
+    {
+      "path": "src/assets/fonts/Arboria/Arboria-MediumItalic.ttf",
+      "sha1": "f4c2a3c19351daa40a29d2a42ae4c4f59b55eae1"
+    },
+    {
+      "path": "src/assets/fonts/Arboria/Arboria-Thin.ttf",
+      "sha1": "9ab8787cf5607bb4ee9bd38ae386f6f15fd7583e"
+    },
+    {
+      "path": "src/assets/fonts/Arboria/Arboria-ThinItalic.ttf",
+      "sha1": "29ba268708785f625d4bde7a7818814422638fee"
+    },
+    {
+      "path": "src/assets/fonts/MonumentExtended/MonumentExtended-Regular.otf",
+      "sha1": "1e787896f58bb8ef3b6d5276f8c6d8da541150d9"
+    },
+    {
+      "path": "src/assets/fonts/MonumentExtended/MonumentExtended-Ultrabold.otf",
+      "sha1": "c34583b8a5b48d6b5e2f657fecdacccf77993835"
+    }
+  ]
+}

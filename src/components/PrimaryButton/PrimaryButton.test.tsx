@@ -12,6 +12,17 @@ describe('Primary Button Component', () => {
     expect(element).toBeOnTheScreen();
   });
 
+  it('should render component with title', () => {
+    const title = 'any_title';
+    const onPress = jest.fn();
+
+    render(<PrimaryButton onPress={onPress} title={title} />);
+
+    const button = screen.getByTestId(content.testID);
+
+    expect(button).toHaveTextContent(title);
+  });
+
   it('should press component', () => {
     const title = 'any_title';
     const onPress = jest.fn();

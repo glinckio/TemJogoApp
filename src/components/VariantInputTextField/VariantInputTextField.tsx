@@ -63,6 +63,7 @@ const VariantInputTextField = ({
           onChangeText={onChangeText}
           placeholder={placeholder ?? ''}
           placeholderTextColor={colors[theme].secondary.light}
+          testID={content.inputTestID}
         />
         {password && (
           <TouchableOpacity
